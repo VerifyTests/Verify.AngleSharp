@@ -34,7 +34,7 @@ public static class VerifyAngleSharpDiffing
         {
             builder.WithOptions(innerSettings.Action);
         }
-        var diffs = builder.Build().ToList();
+        var diffs = builder.Build();
         return !diffs.Any();
     }
 }
