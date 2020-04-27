@@ -17,26 +17,28 @@ public class Samples :
     static Samples()
     {
         #region Initialize
-        VerifyAngleSharpDiffing.Initialize(action =>
-        {
-            static FilterDecision SpanFilter(
-                in ComparisonSource source,
-                FilterDecision decision)
+        VerifyAngleSharpDiffing.Initialize(
+            action =>
             {
-                if (source.Node.NodeName == "SPAN")
+                static FilterDecision SpanFilter(
+                    in ComparisonSource source,
+                    FilterDecision decision)
                 {
-                    return FilterDecision.Exclude;
+                    if (source.Node.NodeName == "SPAN")
+                    {
+                        return FilterDecision.Exclude;
+                    }
+
+                    return decision;
                 }
 
-                return decision;
-            }
-
-            var options = action.AddDefaultOptions();
-            options.AddFilter(SpanFilter);
-        });
+                var options = action.AddDefaultOptions();
+                options.AddFilter(SpanFilter);
+            });
         #endregion
     }
-#region Sample
+
+    #region Sample
     [Fact]
     public async Task Sample()
     {
@@ -55,4 +57,41 @@ public class Samples :
     }
 
     #endregion
+
+    [Fact]
+    public async Task CustomOptions()
+    {
+        #region CustomOptions
+        var settings = new VerifySettings();
+        settings.UseExtension("html");
+        settings.AngleSharpDiffingSettings(
+            action =>
+            {
+                static FilterDecision SpanFilter(
+                    in ComparisonSource source,
+                    FilterDecision decision)
+                {
+                    if (source.Node.NodeName == "SPAN")
+                    {
+                        return FilterDecision.Exclude;
+                    }
+
+                    return decision;
+                }
+
+                var options = action.AddDefaultOptions();
+                options.AddFilter(SpanFilter);
+            });
+        #endregion
+        var html = @"<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>";
+        await Verify(html, settings);
+    }
 }

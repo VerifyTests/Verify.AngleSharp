@@ -4,9 +4,9 @@ using AngleSharp.Diffing.Strategies;
 
 namespace Verify
 {
-    public static class AngleSharpDiffingSettings
+    public static class AngleSharpDiffing
     {
-        public static void PAngleSharpDiffingSettings(
+        public static void AngleSharpDiffingSettings(
             this VerifySettings settings,
             Action<IDiffingStrategyCollection> options)
         {

@@ -39,6 +39,13 @@ snippet: Sample
 Note that the input html differs from the verified html, but not in a semanticaly significant way. Hence this test will pass.
 
 
+### Test level settings
+
+Settings can also be controled for a specific test.
+
+snippet: CustomOptions
+
+
 ## Security contact information
 
 To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.

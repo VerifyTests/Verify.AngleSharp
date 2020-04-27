@@ -20,6 +20,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
   * [Usage](#usage)
     * [Initialize](#initialize)
     * [Verify html](#verify-html)
+    * [Test level settings](#test-level-settings)
   * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 
@@ -39,25 +40,26 @@ Initialize takes an optional `Action<IDiffingStrategyCollection>` to control set
 <!-- snippet: Initialize -->
 <a id='snippet-initialize'/></a>
 ```cs
-VerifyAngleSharpDiffing.Initialize(action =>
-{
-    static FilterDecision SpanFilter(
-        in ComparisonSource source,
-        FilterDecision decision)
+VerifyAngleSharpDiffing.Initialize(
+    action =>
     {
-        if (source.Node.NodeName == "SPAN")
+        static FilterDecision SpanFilter(
+            in ComparisonSource source,
+            FilterDecision decision)
         {
-            return FilterDecision.Exclude;
+            if (source.Node.NodeName == "SPAN")
+            {
+                return FilterDecision.Exclude;
+            }
+
+            return decision;
         }
 
-        return decision;
-    }
-
-    var options = action.AddDefaultOptions();
-    options.AddFilter(SpanFilter);
-});
+        var options = action.AddDefaultOptions();
+        options.AddFilter(SpanFilter);
+    });
 ```
-<sup><a href='/src/Tests/Samples.cs#L19-L37' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L19-L38' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -101,10 +103,42 @@ public async Task Sample()
     await Verify(html, settings);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L39-L57' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L41-L59' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
 <!-- endsnippet -->
 
 Note that the input html differs from the verified html, but not in a semanticaly significant way. Hence this test will pass.
+
+
+### Test level settings
+
+Settings can also be controled for a specific test.
+
+<!-- snippet: CustomOptions -->
+<a id='snippet-customoptions'/></a>
+```cs
+var settings = new VerifySettings();
+settings.UseExtension("html");
+settings.AngleSharpDiffingSettings(
+    action =>
+    {
+        static FilterDecision SpanFilter(
+            in ComparisonSource source,
+            FilterDecision decision)
+        {
+            if (source.Node.NodeName == "SPAN")
+            {
+                return FilterDecision.Exclude;
+            }
+
+            return decision;
+        }
+
+        var options = action.AddDefaultOptions();
+        options.AddFilter(SpanFilter);
+    });
+```
+<sup><a href='/src/Tests/Samples.cs#L64-L85' title='File snippet `customoptions` was extracted from'>snippet source</a> | <a href='#snippet-customoptions' title='Navigate to start of snippet `customoptions`'>anchor</a></sup>
+<!-- endsnippet -->
 
 
 ## Security contact information
