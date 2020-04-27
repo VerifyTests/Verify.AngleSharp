@@ -57,7 +57,7 @@ VerifyAngleSharpDiffing.Initialize(action =>
     options.AddFilter(SpanFilter);
 });
 ```
-<sup><a href='/src/Tests/Samples.cs#L20-L38' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L19-L37' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -94,14 +94,14 @@ public async Task Sample()
 <body>
 
 <h1>My First Heading</h1>
-<p>My first paragrafph.</p>
+<p>My first paragraph.</p>
 
 </body>
 </html>";
     await Verify(html, settings);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L40-L58' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L39-L57' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
 <!-- endsnippet -->
 
 Note that the input html differs from the verified html, but not in a semanticaly significant way. Hence this test will pass.
