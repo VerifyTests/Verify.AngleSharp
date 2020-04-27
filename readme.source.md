@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> Verify.AngleSharp.Diffing
 
-[![Build status](https://ci.appveyor.com/api/projects/status/18lflc71pchw565r?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp-Diffing)
-[![NuGet Status](https://img.shields.io/nuget/v/Verify.Phash.svg)](https://www.nuget.org/packages/Verify.AngleSharp.Diffing/)
+[![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp-Diffing)
+[![NuGet Status](https://img.shields.io/nuget/v/Verify.AngleSharp.Diffing.svg)](https://www.nuget.org/packages/Verify.AngleSharp.Diffing/)
 
 Extends [Verify](https://github.com/SimonCropp/Verify) to allow [comparison](https://github.com/SimonCropp/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp.Diffing](https://github.com/AngleSharp/AngleSharp.Diffing).
 

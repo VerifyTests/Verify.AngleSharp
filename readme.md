@@ -7,8 +7,8 @@ To change this file edit the source file and then run MarkdownSnippets.
 
 # <img src="/src/icon.png" height="30px"> Verify.AngleSharp.Diffing
 
-[![Build status](https://ci.appveyor.com/api/projects/status/18lflc71pchw565r?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp-Diffing)
-[![NuGet Status](https://img.shields.io/nuget/v/Verify.Phash.svg)](https://www.nuget.org/packages/Verify.AngleSharp.Diffing/)
+[![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp-Diffing)
+[![NuGet Status](https://img.shields.io/nuget/v/Verify.AngleSharp.Diffing.svg)](https://www.nuget.org/packages/Verify.AngleSharp.Diffing/)
 
 Extends [Verify](https://github.com/SimonCropp/Verify) to allow [comparison](https://github.com/SimonCropp/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp.Diffing](https://github.com/AngleSharp/AngleSharp.Diffing).
 
@@ -57,7 +57,7 @@ VerifyAngleSharpDiffing.Initialize(action =>
     options.AddFilter(SpanFilter);
 });
 ```
-<sup><a href='/src/Tests/Samples.cs#L20-L38' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L19-L37' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -94,14 +94,14 @@ public async Task Sample()
 <body>
 
 <h1>My First Heading</h1>
-<p>My first paragrafph.</p>
+<p>My first paragraph.</p>
 
 </body>
 </html>";
     await Verify(html, settings);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L40-L58' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L39-L57' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
 <!-- endsnippet -->
 
 Note that the input html differs from the verified html, but not in a semanticaly significant way. Hence this test will pass.
