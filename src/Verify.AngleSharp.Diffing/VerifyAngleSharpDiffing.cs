@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AngleSharp.Diffing;
-using AngleSharp.Diffing.Core;
 using AngleSharp.Diffing.Strategies;
 using Verify;
 using CompareResult = Verify.CompareResult;
@@ -69,70 +68,7 @@ public static class VerifyAngleSharpDiffing
             var stringBuilder = new StringBuilder(Environment.NewLine);
             foreach (var diff in diffs)
             {
-                if(diff is NodeDiff nodeDiff)
-                {
-                    var receivedSource = nodeDiff.Test;
-                    var verifiedSource = nodeDiff.Control;
-                    stringBuilder.AppendLine($@" * Node Diff
-   Path: {receivedSource.Path}
-   Received Value: {receivedSource.Node.NodeValue}
-   Verified Value: {verifiedSource.Node.NodeValue}");
-                    continue;
-                }
-
-                if(diff is AttrDiff attrDiff)
-                {
-                    var receivedSource = attrDiff.Test;
-                    var verifiedSource = attrDiff.Control;
-                    stringBuilder.AppendLine($@" * Attribute Diff
-   Path: {receivedSource.Path}
-   Name: {receivedSource.Attribute.Name}
-   Received Value: {receivedSource.Attribute.Value}
-   Verified Value: {verifiedSource.Attribute.Value}");
-                    continue;
-                }
-
-                if(diff is UnexpectedAttrDiff unexpectedAttrDiff)
-                {
-                    var receivedSource = unexpectedAttrDiff.Test;
-                    stringBuilder.AppendLine($@" * Unexpected Attribute
-   Path: {receivedSource.Path}
-   Name: {receivedSource.Attribute.Name}
-   Value: {receivedSource.Attribute.Value}");
-                    continue;
-                }
-
-                if(diff is UnexpectedNodeDiff unexpectedNodeDiff)
-                {
-                    var receivedSource = unexpectedNodeDiff.Test;
-                    stringBuilder.AppendLine($@"* Unexpected Node
-   Path: {receivedSource.Path}
-   Name: {receivedSource.Node.NodeName}
-   Value: {receivedSource.Node.NodeValue}");
-                    continue;
-                }
-
-                if(diff is MissingAttrDiff missingAttrDiff)
-                {
-                    var verifiedSource = missingAttrDiff.Control;
-                    stringBuilder.AppendLine($@" * Missing Attribute
-   Path: {verifiedSource.Path}
-   Name: {verifiedSource.Attribute.Name}
-   Value: {verifiedSource.Attribute.Value}");
-                    continue;
-                }
-
-                if(diff is MissingNodeDiff missingNodeDiff)
-                {
-                    var receivedSource = missingNodeDiff.Control;
-                    stringBuilder.AppendLine($@" * Missing Node
-   Path: {receivedSource.Path}
-   Name: {receivedSource.Node.NodeName}
-   Value: {receivedSource.Node.NodeValue}");
-                    continue;
-                }
-
-                throw new Exception($"Unknown diff: {diff.GetType()}");
+                DiffConverter.Append(diff, stringBuilder);
             }
 
             return CompareResult.NotEqual(stringBuilder.ToString());

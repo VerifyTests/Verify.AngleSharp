@@ -20,6 +20,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
   * [Usage](#usage)
     * [Initialize](#initialize)
     * [Verify html](#verify-html)
+    * [Diff results](#diff-results)
     * [Test level settings](#test-level-settings)
   * [Security contact information](#security-contact-information)<!-- endtoc -->
 
@@ -30,6 +31,7 @@ https://nuget.org/packages/Verify.AngleSharp.Diffing/
 
 
 ## Usage
+
 
 ### Initialize
 
@@ -81,7 +83,7 @@ Given an existing verified file:
 <sup><a href='/src/Tests/Samples.Sample.verified.html#L1-L7' title='File snippet `Samples.Sample.verified.html` was extracted from'>snippet source</a> | <a href='#snippet-Samples.Sample.verified.html' title='Navigate to start of snippet `Samples.Sample.verified.html`'>anchor</a></sup>
 <!-- endsnippet -->
 
-And a test: 
+And a test:
 
 <!-- snippet: Sample -->
 <a id='snippet-sample'/></a>
@@ -106,12 +108,27 @@ public async Task Sample()
 <sup><a href='/src/Tests/Samples.cs#L41-L59' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
 <!-- endsnippet -->
 
-Note that the input html differs from the verified html, but not in a semanticaly significant way. Hence this test will pass.
+Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
+
+
+### Diff results
+
+If the comparison fails, the resulting differences will be included in the test result displayed to the user.
+
+For example if, in the above html, `<h1>My First Heading</h1>` changes to `<h1>First Heading</h1>` then the following will be printed in the test results:
+
+```
+Comparer result:
+ * Node Diff
+   Path: h1(0) > #text(0)
+   Received: First Heading
+   Verified: My First Heading
+```
 
 
 ### Test level settings
 
-Settings can also be controled for a specific test.
+Settings can also be controlled for a specific test.
 
 <!-- snippet: CustomOptions -->
 <a id='snippet-customoptions'/></a>
