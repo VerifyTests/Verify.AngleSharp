@@ -2,18 +2,12 @@
 using AngleSharp.Diffing;
 using AngleSharp.Diffing.Core;
 using Verify;
-using VerifyXunit;
-using Xunit;
-using Xunit.Abstractions;
+using VerifyNUnit;
+using NUnit.Framework;
 
-public class Samples :
-    VerifyBase
+[TestFixture]
+public class Samples
 {
-    public Samples(ITestOutputHelper output) :
-        base(output)
-    {
-    }
-
     static Samples()
     {
         #region Initialize
@@ -39,8 +33,8 @@ public class Samples :
     }
 
     #region Sample
-    [Fact]
-    public async Task Sample()
+    [Test]
+    public Task Sample()
     {
         var settings = new VerifySettings();
         settings.UseExtension("html");
@@ -53,13 +47,13 @@ public class Samples :
 
 </body>
 </html>";
-        await Verify(html, settings);
+        return Verifier.Verify(html, settings);
     }
 
     #endregion
 
-    [Fact]
-    public async Task CustomOptions()
+    [Test]
+    public Task CustomOptions()
     {
         #region CustomOptions
         var settings = new VerifySettings();
@@ -92,6 +86,6 @@ public class Samples :
 
 </body>
 </html>";
-        await Verify(html, settings);
+        return Verifier.Verify(html, settings);
     }
 }

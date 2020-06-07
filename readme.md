@@ -61,7 +61,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L19-L38' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L13-L32' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -88,8 +88,8 @@ And a test:
 <!-- snippet: Sample -->
 <a id='snippet-sample'/></a>
 ```cs
-[Fact]
-public async Task Sample()
+[Test]
+public Task Sample()
 {
     var settings = new VerifySettings();
     settings.UseExtension("html");
@@ -102,10 +102,10 @@ public async Task Sample()
 
 </body>
 </html>";
-    await Verify(html, settings);
+    return Verifier.Verify(html, settings);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L41-L59' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L35-L53' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
 <!-- endsnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -154,7 +154,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L64-L85' title='File snippet `customoptions` was extracted from'>snippet source</a> | <a href='#snippet-customoptions' title='Navigate to start of snippet `customoptions`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L58-L79' title='File snippet `customoptions` was extracted from'>snippet source</a> | <a href='#snippet-customoptions' title='Navigate to start of snippet `customoptions`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
