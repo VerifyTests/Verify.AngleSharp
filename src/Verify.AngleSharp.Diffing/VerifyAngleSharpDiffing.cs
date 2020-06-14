@@ -6,74 +6,75 @@ using System.Text;
 using System.Threading.Tasks;
 using AngleSharp.Diffing;
 using AngleSharp.Diffing.Strategies;
-using Verify;
-using CompareResult = Verify.CompareResult;
 
-public static class VerifyAngleSharpDiffing
+namespace VerifyTests
 {
-    public static void AngleSharpDiffingSettings(
-        this VerifySettings settings,
-        Action<IDiffingStrategyCollection> options)
+    public static class VerifyAngleSharpDiffing
     {
-        Guard.AgainstNull(settings, nameof(settings));
-        settings.Data["AngleSharpDiffing"] = new CompareSettings(options);
-    }
-
-    static bool GetCompareSettings(
-        this VerifySettings settings,
-        [NotNullWhen(true)] out CompareSettings? pagesSettings)
-    {
-        Guard.AgainstNull(settings, nameof(settings));
-        if (settings.Data.TryGetValue("AngleSharpDiffing", out var value))
+        public static void AngleSharpDiffingSettings(
+            this VerifySettings settings,
+            Action<IDiffingStrategyCollection> options)
         {
-            pagesSettings = (CompareSettings) value;
-            return true;
+            Guard.AgainstNull(settings, nameof(settings));
+            settings.Data["AngleSharpDiffing"] = new CompareSettings(options);
         }
 
-        pagesSettings = null;
-        return false;
-    }
-
-    public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
-    {
-        Task<CompareResult> Func(VerifySettings settings, Stream received, Stream verified) =>
-            Compare(settings, received, verified, action);
-
-        SharedVerifySettings.RegisterComparer("html", Func);
-        SharedVerifySettings.RegisterComparer("htm", Func);
-    }
-
-    static async Task<CompareResult> Compare(
-        VerifySettings settings,
-        Stream received,
-        Stream verified,
-        Action<IDiffingStrategyCollection>? action)
-    {
-        var builder = DiffBuilder.Compare(await verified.ReadString());
-        builder.WithTest(await received.ReadString());
-
-        if (action != null)
+        static bool GetCompareSettings(
+            this VerifySettings settings,
+            [NotNullWhen(true)] out CompareSettings? pagesSettings)
         {
-            builder.WithOptions(action);
-        }
-
-        if (settings.GetCompareSettings(out var innerSettings))
-        {
-            builder.WithOptions(innerSettings.Action);
-        }
-
-        var diffs = builder.Build().ToList();
-        if (diffs.Any())
-        {
-            var stringBuilder = new StringBuilder(Environment.NewLine);
-            foreach (var diff in diffs)
+            Guard.AgainstNull(settings, nameof(settings));
+            if (settings.Data.TryGetValue("AngleSharpDiffing", out var value))
             {
-                DiffConverter.Append(diff, stringBuilder);
+                pagesSettings = (CompareSettings) value;
+                return true;
             }
 
-            return CompareResult.NotEqual(stringBuilder.ToString());
+            pagesSettings = null;
+            return false;
         }
 
-        return CompareResult.Equal;
+        public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
+        {
+            Task<CompareResult> Func(VerifySettings settings, Stream received, Stream verified) =>
+                Compare(settings, received, verified, action);
+
+            VerifierSettings.RegisterComparer("html", Func);
+            VerifierSettings.RegisterComparer("htm", Func);
+        }
+
+        static async Task<CompareResult> Compare(
+            VerifySettings settings,
+            Stream received,
+            Stream verified,
+            Action<IDiffingStrategyCollection>? action)
+        {
+            var builder = DiffBuilder.Compare(await verified.ReadString());
+            builder.WithTest(await received.ReadString());
+
+            if (action != null)
+            {
+                builder.WithOptions(action);
+            }
+
+            if (settings.GetCompareSettings(out var innerSettings))
+            {
+                builder.WithOptions(innerSettings.Action);
+            }
+
+            var diffs = builder.Build().ToList();
+            if (diffs.Any())
+            {
+                var stringBuilder = new StringBuilder(Environment.NewLine);
+                foreach (var diff in diffs)
+                {
+                    DiffConverter.Append(diff, stringBuilder);
+                }
+
+                return CompareResult.NotEqual(stringBuilder.ToString());
+            }
+
+            return CompareResult.Equal;
+        }
     }
 }

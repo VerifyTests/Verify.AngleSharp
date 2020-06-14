@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AngleSharp.Diffing;
 using AngleSharp.Diffing.Core;
-using Verify;
+using VerifyTests;
 using VerifyNUnit;
 using NUnit.Framework;
 
