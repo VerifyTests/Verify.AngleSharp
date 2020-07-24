@@ -5,7 +5,7 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow [comparison](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp.Diffing](https://github.com/AngleSharp/AngleSharp.Diffing).
 
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify.anglesharp.diffing?utm_source=nuget-verify.anglesharp.diffing&utm_medium=referral&utm_campaign=enterprise).
+Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify?utm_source=nuget-verify&utm_medium=referral&utm_campaign=enterprise).
 
 toc
 
