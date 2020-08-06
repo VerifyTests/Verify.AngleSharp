@@ -43,7 +43,7 @@ Call `VerifyAngleSharpDiffing.Initialize()` once at assembly load time.
 Initialize takes an optional `Action<IDiffingStrategyCollection>` to control settings at a global level:
 
 <!-- snippet: Initialize -->
-<a id='snippet-initialize'/></a>
+<a id='snippet-initialize'></a>
 ```cs
 VerifyAngleSharpDiffing.Initialize(
     action =>
@@ -73,7 +73,7 @@ VerifyAngleSharpDiffing.Initialize(
 Given an existing verified file:
 
 <!-- snippet: Samples.Sample.verified.html -->
-<a id='snippet-Samples.Sample.verified.html'/></a>
+<a id='snippet-Samples.Sample.verified.html'></a>
 ```html
 <!DOCTYPE html>
 <html>
@@ -89,7 +89,7 @@ Given an existing verified file:
 And a test:
 
 <!-- snippet: Sample -->
-<a id='snippet-sample'/></a>
+<a id='snippet-sample'></a>
 ```cs
 [Test]
 public Task Sample()
@@ -134,7 +134,7 @@ Comparer result:
 Settings can also be controlled for a specific test.
 
 <!-- snippet: CustomOptions -->
-<a id='snippet-customoptions'/></a>
+<a id='snippet-customoptions'></a>
 ```cs
 var settings = new VerifySettings();
 settings.UseExtension("html");
