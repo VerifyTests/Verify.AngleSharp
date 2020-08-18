@@ -25,7 +25,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
     * [Verify html](#verify-html)
     * [Diff results](#diff-results)
     * [Test level settings](#test-level-settings)
-  * [Security contact information](#security-contact-information)<!-- endtoc -->
+  * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
 ## NuGet package
@@ -65,7 +65,7 @@ VerifyAngleSharpDiffing.Initialize(
     });
 ```
 <sup><a href='/src/Tests/Samples.cs#L13-L32' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ### Verify html
@@ -84,7 +84,7 @@ Given an existing verified file:
 </html>
 ```
 <sup><a href='/src/Tests/Samples.Sample.verified.html#L1-L7' title='File snippet `Samples.Sample.verified.html` was extracted from'>snippet source</a> | <a href='#snippet-Samples.Sample.verified.html' title='Navigate to start of snippet `Samples.Sample.verified.html`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 And a test:
 
@@ -109,7 +109,7 @@ public Task Sample()
 }
 ```
 <sup><a href='/src/Tests/Samples.cs#L35-L53' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
 
@@ -158,7 +158,7 @@ settings.AngleSharpDiffingSettings(
     });
 ```
 <sup><a href='/src/Tests/Samples.cs#L58-L79' title='File snippet `customoptions` was extracted from'>snippet source</a> | <a href='#snippet-customoptions' title='Navigate to start of snippet `customoptions`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ## Security contact information
