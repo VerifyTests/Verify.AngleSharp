@@ -16,7 +16,7 @@ namespace VerifyTests
             Action<IDiffingStrategyCollection> options)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            settings.Data["AngleSharpDiffing"] = new CompareSettings(options);
+            settings.Context["AngleSharpDiffing"] = new CompareSettings(options);
         }
 
         static bool GetCompareSettings(
@@ -24,7 +24,7 @@ namespace VerifyTests
             [NotNullWhen(true)] out CompareSettings? pagesSettings)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            if (settings.Data.TryGetValue("AngleSharpDiffing", out var value))
+            if (settings.Context.TryGetValue("AngleSharpDiffing", out var value))
             {
                 pagesSettings = (CompareSettings) value;
                 return true;
