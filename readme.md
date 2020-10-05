@@ -64,7 +64,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L13-L32' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L13-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -83,7 +83,7 @@ Given an existing verified file:
 </body>
 </html>
 ```
-<sup><a href='/src/Tests/Samples.Sample.verified.html#L1-L7' title='File snippet `Samples.Sample.verified.html` was extracted from'>snippet source</a> | <a href='#snippet-Samples.Sample.verified.html' title='Navigate to start of snippet `Samples.Sample.verified.html`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.Sample.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.Sample.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 And a test:
@@ -108,7 +108,7 @@ public Task Sample()
     return Verifier.Verify(html, settings);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L35-L53' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L35-L53' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -157,7 +157,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L58-L79' title='File snippet `customoptions` was extracted from'>snippet source</a> | <a href='#snippet-customoptions' title='Navigate to start of snippet `customoptions`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L58-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
