@@ -43,7 +43,7 @@ Call `VerifyAngleSharpDiffing.Initialize()` once at assembly load time.
 Initialize takes an optional `Action<IDiffingStrategyCollection>` to control settings at a global level:
 
 <!-- snippet: Initialize -->
-<a id='snippet-initialize'></a>
+<a id='4728f278'></a>
 ```cs
 VerifyAngleSharpDiffing.Initialize(
     action =>
@@ -64,7 +64,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L13-L32' title='File snippet `initialize` was extracted from'>snippet source</a> | <a href='#snippet-initialize' title='Navigate to start of snippet `initialize`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L13-L32' title='Snippet source file'>snippet source</a> | <a href='#4728f278' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -73,7 +73,7 @@ VerifyAngleSharpDiffing.Initialize(
 Given an existing verified file:
 
 <!-- snippet: Samples.Sample.verified.html -->
-<a id='snippet-Samples.Sample.verified.html'></a>
+<a id='70298b18'></a>
 ```html
 <!DOCTYPE html>
 <html>
@@ -83,13 +83,13 @@ Given an existing verified file:
 </body>
 </html>
 ```
-<sup><a href='/src/Tests/Samples.Sample.verified.html#L1-L7' title='File snippet `Samples.Sample.verified.html` was extracted from'>snippet source</a> | <a href='#snippet-Samples.Sample.verified.html' title='Navigate to start of snippet `Samples.Sample.verified.html`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.Sample.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#70298b18' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 And a test:
 
 <!-- snippet: Sample -->
-<a id='snippet-sample'></a>
+<a id='8151325d'></a>
 ```cs
 [Test]
 public Task Sample()
@@ -108,7 +108,7 @@ public Task Sample()
     return Verifier.Verify(html, settings);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L35-L53' title='File snippet `sample` was extracted from'>snippet source</a> | <a href='#snippet-sample' title='Navigate to start of snippet `sample`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L35-L53' title='Snippet source file'>snippet source</a> | <a href='#8151325d' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -134,7 +134,7 @@ Comparer result:
 Settings can also be controlled for a specific test.
 
 <!-- snippet: CustomOptions -->
-<a id='snippet-customoptions'></a>
+<a id='d6bba0bb'></a>
 ```cs
 var settings = new VerifySettings();
 settings.UseExtension("html");
@@ -157,7 +157,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L58-L79' title='File snippet `customoptions` was extracted from'>snippet source</a> | <a href='#snippet-customoptions' title='Navigate to start of snippet `customoptions`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L58-L79' title='Snippet source file'>snippet source</a> | <a href='#d6bba0bb' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
