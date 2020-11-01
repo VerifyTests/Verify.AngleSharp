@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -20,11 +21,10 @@ namespace VerifyTests
         }
 
         static bool GetCompareSettings(
-            this VerifySettings settings,
+            this IReadOnlyDictionary<string,object> context,
             [NotNullWhen(true)] out CompareSettings? pagesSettings)
         {
-            Guard.AgainstNull(settings, nameof(settings));
-            if (settings.Context.TryGetValue("AngleSharpDiffing", out var value))
+            if (context.TryGetValue("AngleSharpDiffing", out var value))
             {
                 pagesSettings = (CompareSettings) value;
                 return true;
@@ -36,17 +36,17 @@ namespace VerifyTests
 
         public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
         {
-            Task<CompareResult> Func(VerifySettings settings, Stream received, Stream verified) =>
-                Compare(settings, received, verified, action);
+            Task<CompareResult> Func(Stream received, Stream verified, IReadOnlyDictionary<string, object> context) =>
+                Compare(received, verified, context, action);
 
             VerifierSettings.RegisterComparer("html", Func);
             VerifierSettings.RegisterComparer("htm", Func);
         }
 
         static async Task<CompareResult> Compare(
-            VerifySettings settings,
             Stream received,
             Stream verified,
+            IReadOnlyDictionary<string, object> context,
             Action<IDiffingStrategyCollection>? action)
         {
             var builder = DiffBuilder.Compare(await verified.ReadString());
@@ -57,7 +57,7 @@ namespace VerifyTests
                 builder.WithOptions(action);
             }
 
-            if (settings.GetCompareSettings(out var innerSettings))
+            if (context.GetCompareSettings(out var innerSettings))
             {
                 builder.WithOptions(innerSettings.Action);
             }
