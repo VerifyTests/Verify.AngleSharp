@@ -20,8 +20,17 @@ namespace VerifyTests
             settings.Context["AngleSharpDiffing"] = new CompareSettings(options);
         }
 
+        public static SettingsTask AngleSharpDiffingSettings(
+            this SettingsTask settings,
+            Action<IDiffingStrategyCollection> options)
+        {
+            Guard.AgainstNull(settings, nameof(settings));
+            settings.CurrentSettings.AngleSharpDiffingSettings(options);
+            return settings;
+        }
+
         static bool GetCompareSettings(
-            this IReadOnlyDictionary<string,object> context,
+            this IReadOnlyDictionary<string, object> context,
             [NotNullWhen(true)] out CompareSettings? pagesSettings)
         {
             if (context.TryGetValue("AngleSharpDiffing", out var value))
