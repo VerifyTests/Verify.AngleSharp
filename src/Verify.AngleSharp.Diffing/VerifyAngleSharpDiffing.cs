@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,21 +44,24 @@ namespace VerifyTests
 
         public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
         {
-            Task<CompareResult> Func(Stream received, Stream verified, IReadOnlyDictionary<string, object> context) =>
-                Compare(received, verified, context, action);
+            Task<CompareResult> Func(string received, string verified, IReadOnlyDictionary<string, object> context)
+            {
+                var compare = Compare(received, verified, context, action);
+                return Task.FromResult(compare);
+            }
 
-            VerifierSettings.RegisterComparer("html", Func);
-            VerifierSettings.RegisterComparer("htm", Func);
+            VerifierSettings.RegisterStringComparer("html", Func);
+            VerifierSettings.RegisterStringComparer("htm", Func);
         }
 
-        static async Task<CompareResult> Compare(
-            Stream received,
-            Stream verified,
+        static CompareResult Compare(
+            string received,
+            string verified,
             IReadOnlyDictionary<string, object> context,
             Action<IDiffingStrategyCollection>? action)
         {
-            var builder = DiffBuilder.Compare(await verified.ReadString());
-            builder.WithTest(await received.ReadString());
+            var builder = DiffBuilder.Compare(verified);
+            builder.WithTest(received);
 
             if (action != null)
             {
