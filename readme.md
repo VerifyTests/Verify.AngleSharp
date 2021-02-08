@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.AngleSharp.svg)](https://www.nuget.org/packages/Verify.AngleSharp/)
 
-Extends [Verify](https://github.com/VerifyTests/Verify) to allow [comparison](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp](https://github.com/AngleSharp/AngleSharp).
+Extends [Verify](https://github.com/VerifyTests/Verify) with Html verification utilities via [AngleSharp](https://github.com/AngleSharp/AngleSharp).
 
 Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify?utm_source=nuget-verify&utm_medium=referral&utm_campaign=enterprise).
 
@@ -13,7 +13,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 <!-- toc -->
 ## Contents
 
-  * [Usage](#usage)
+  * [Comparer Usage](#comparer-usage)
     * [Initialize](#initialize)
     * [Verify html](#verify-html)
     * [Diff results](#diff-results)
@@ -26,12 +26,14 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 https://nuget.org/packages/Verify.AngleSharp/
 
 
-## Usage
+## Comparer Usage
+
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow [comparison](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp](https://github.com/AngleSharp/AngleSharp.Diffing).
 
 
 ### Initialize
 
-Call `VerifyAngleSharp.Initialize()` once at assembly load time.
+Call `VerifyAngleSharpDiffing.Initialize()` once at assembly load time.
 
 Initialize takes an optional `Action<IDiffingStrategyCollection>` to control settings at a global level:
 

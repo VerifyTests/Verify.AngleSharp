@@ -5,7 +5,7 @@
     <Version>2.4.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>AngleSharp, Verify</PackageTags>
-    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow comparison of html via AngleSharp.Diffing (https://github.com/AngleSharp/AngleSharp.Diffing).</Description>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow comparison of html via AngleSharp (https://github.com/AngleSharp/AngleSharp.Diffing).</Description>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 </Project>
