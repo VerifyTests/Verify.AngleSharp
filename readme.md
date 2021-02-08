@@ -1,9 +1,9 @@
-# <img src="/src/icon.png" height="30px"> Verify.AngleSharp.Diffing
+# <img src="/src/icon.png" height="30px"> Verify.AngleSharp
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp-Diffing)
-[![NuGet Status](https://img.shields.io/nuget/v/Verify.AngleSharp.Diffing.svg)](https://www.nuget.org/packages/Verify.AngleSharp.Diffing/)
+[![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp)
+[![NuGet Status](https://img.shields.io/nuget/v/Verify.AngleSharp.svg)](https://www.nuget.org/packages/Verify.AngleSharp/)
 
-Extends [Verify](https://github.com/VerifyTests/Verify) to allow [comparison](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp.Diffing](https://github.com/AngleSharp/AngleSharp.Diffing).
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow [comparison](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) of htm and html files via [AngleSharp](https://github.com/AngleSharp/AngleSharp).
 
 Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify?utm_source=nuget-verify&utm_medium=referral&utm_campaign=enterprise).
 
@@ -23,7 +23,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 
 ## NuGet package
 
-https://nuget.org/packages/Verify.AngleSharp.Diffing/
+https://nuget.org/packages/Verify.AngleSharp/
 
 
 ## Usage
@@ -31,7 +31,7 @@ https://nuget.org/packages/Verify.AngleSharp.Diffing/
 
 ### Initialize
 
-Call `VerifyAngleSharpDiffing.Initialize()` once at assembly load time.
+Call `VerifyAngleSharp.Initialize()` once at assembly load time.
 
 Initialize takes an optional `Action<IDiffingStrategyCollection>` to control settings at a global level:
 
@@ -87,8 +87,6 @@ And a test:
 [Test]
 public Task Sample()
 {
-    var settings = new VerifySettings();
-    settings.UseExtension("html");
     var html = @"<!DOCTYPE html>
 <html>
 <body>
@@ -98,10 +96,11 @@ public Task Sample()
 
 </body>
 </html>";
-    return Verifier.Verify(html, settings);
+    return Verifier.Verify(html)
+        .UseExtension("html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L35-L53' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L35-L52' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -129,7 +128,7 @@ Settings can also be controlled for a specific test.
 <!-- snippet: CustomOptions -->
 <a id='snippet-customoptions'></a>
 ```cs
-var settings = new VerifySettings();
+VerifySettings settings = new();
 settings.UseExtension("html");
 settings.AngleSharpDiffingSettings(
     action =>
@@ -150,7 +149,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L58-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L57-L78' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

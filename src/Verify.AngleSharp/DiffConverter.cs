@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using AngleSharp.Diffing.Core;
 
 static class DiffConverter
@@ -69,6 +68,6 @@ static class DiffConverter
             return;
         }
 
-        throw new Exception($"Unknown diff: {diff.GetType()}");
+        throw new($"Unknown diff: {diff.GetType()}");
     }
 }

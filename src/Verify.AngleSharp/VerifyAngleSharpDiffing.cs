@@ -76,7 +76,7 @@ namespace VerifyTests
             var diffs = builder.Build().ToList();
             if (diffs.Any())
             {
-                var stringBuilder = new StringBuilder(Environment.NewLine);
+                StringBuilder stringBuilder = new(Environment.NewLine);
                 foreach (var diff in diffs)
                 {
                     DiffConverter.Append(diff, stringBuilder);

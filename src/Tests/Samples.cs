@@ -36,8 +36,6 @@ public class Samples
     [Test]
     public Task Sample()
     {
-        var settings = new VerifySettings();
-        settings.UseExtension("html");
         var html = @"<!DOCTYPE html>
 <html>
 <body>
@@ -47,7 +45,8 @@ public class Samples
 
 </body>
 </html>";
-        return Verifier.Verify(html, settings);
+        return Verifier.Verify(html)
+            .UseExtension("html");
     }
 
     #endregion
@@ -56,7 +55,7 @@ public class Samples
     public Task CustomOptions()
     {
         #region CustomOptions
-        var settings = new VerifySettings();
+        VerifySettings settings = new();
         settings.UseExtension("html");
         settings.AngleSharpDiffingSettings(
             action =>
