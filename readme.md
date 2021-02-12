@@ -155,7 +155,7 @@ settings.AngleSharpDiffingSettings(
 <sup><a href='/src/Tests/Samples.cs#L72-L93' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-### PrettyPrin
+### Pretty Print
 
 Html can be pretty printed.
 
