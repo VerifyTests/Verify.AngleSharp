@@ -4,6 +4,7 @@ using AngleSharp.Diffing.Core;
 using VerifyTests;
 using VerifyNUnit;
 using NUnit.Framework;
+using Verify.AngleSharp;
 
 [TestFixture]
 public class Samples
@@ -31,6 +32,20 @@ public class Samples
             });
         #endregion
     }
+
+    #region PrettyPrintHtml
+    [Test]
+    public Task PrettyPrintHtml()
+    {
+        var html = @"<!DOCTYPE html>
+<html><body><h1>My First Heading</h1>
+<p>My first paragraph.</p></body></html>";
+        return Verifier.Verify(html)
+            .UseExtension("html")
+            .PrettyPrintHtml();
+    }
+
+    #endregion
 
     #region Sample
     [Test]

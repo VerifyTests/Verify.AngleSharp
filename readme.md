@@ -18,6 +18,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
     * [Verify html](#verify-html)
     * [Diff results](#diff-results)
     * [Test level settings](#test-level-settings)
+    * [PrettyPrin](#prettyprin)
   * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
@@ -59,7 +60,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L13-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L14-L33' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -102,7 +103,7 @@ public Task Sample()
         .UseExtension("html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L35-L52' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L50-L67' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -151,7 +152,46 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L57-L78' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L72-L93' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+### PrettyPrin
+
+Html can be pretty printed.
+
+<!-- snippet: PrettyPrintHtml -->
+<a id='snippet-prettyprinthtml'></a>
+```cs
+[Test]
+public Task PrettyPrintHtml()
+{
+    var html = @"<!DOCTYPE html>
+<html><body><h1>My First Heading</h1>
+<p>My first paragraph.</p></body></html>";
+    return Verifier.Verify(html)
+        .UseExtension("html")
+        .PrettyPrintHtml();
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L36-L48' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in 
+
+<!-- snippet: Samples.PrettyPrintHtml.verified.html -->
+<a id='snippet-Samples.PrettyPrintHtml.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.PrettyPrintHtml.verified.html#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtml.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
