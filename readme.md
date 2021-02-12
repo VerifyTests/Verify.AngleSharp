@@ -183,15 +183,14 @@ Results in
 ```html
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-</body>
+  <head></head>
+  <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+  </body>
 </html>
 ```
-<sup><a href='/src/Tests/Samples.PrettyPrintHtml.verified.html#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtml.verified.html' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.PrettyPrintHtml.verified.html#L1-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtml.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
