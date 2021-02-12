@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using AngleSharp.Html;
 using AngleSharp.Html.Parser;
@@ -8,18 +9,29 @@ namespace Verify.AngleSharp
 {
     public static class HtmlPrettyPrint
     {
+        public static void All()
+        {
+            VerifierSettings.AddScrubber("html", Scrubber);
+            VerifierSettings.AddScrubber("htm", Scrubber);
+        }
+
         public static void PrettyPrintHtml(
             this VerifySettings settings)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            settings.AddScrubber(builder => CleanSource(builder));
+            settings.AddScrubber("html", Scrubber);
+            settings.AddScrubber("htm", Scrubber);
         }
+
+        static void Scrubber(StringBuilder builder) => CleanSource(builder);
 
         public static SettingsTask PrettyPrintHtml(
             this SettingsTask settings)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            return settings.AddScrubber(builder => CleanSource(builder));
+            settings.AddScrubber("html", Scrubber);
+            settings.AddScrubber("htm", Scrubber);
+            return settings;
         }
 
         static PrettyMarkupFormatter formatter = new()
