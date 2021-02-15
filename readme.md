@@ -18,7 +18,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
     * [Verify html](#verify-html)
     * [Diff results](#diff-results)
     * [Test level settings](#test-level-settings)
-    * [Pretty Print](#pretty-print)
+  * [Pretty Print](#pretty-print)
   * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
