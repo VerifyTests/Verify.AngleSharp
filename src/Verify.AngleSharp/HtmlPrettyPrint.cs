@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using AngleSharp.Html;
 using AngleSharp.Html.Parser;
