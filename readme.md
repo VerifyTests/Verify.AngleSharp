@@ -193,6 +193,8 @@ Results in
 <sup><a href='/src/Tests/Samples.PrettyPrintHtml.verified.html#L1-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtml.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+To apply this to all `html` files use `HtmlPrettyPrint.All();`
+
 
 ## Security contact information
 
