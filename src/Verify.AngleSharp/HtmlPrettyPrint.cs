@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
+using AngleSharp.Dom;
 using AngleSharp.Html;
 using AngleSharp.Html.Parser;
 using VerifyTests;
@@ -41,8 +43,20 @@ namespace Verify.AngleSharp
 
         static StringBuilder CleanSource(StringBuilder builder)
         {
+            var source = builder.ToString();
             HtmlParser parser = new();
-            var document = parser.ParseFragment(builder.ToString(), null);
+            INodeList document;
+            if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
+                source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
+            {
+                document = parser.ParseFragment(source, null);
+            }
+            else
+            {
+                var dom = parser.ParseDocument("<html><body></body></html>");
+                document = parser.ParseFragment(source, dom.Body);
+            }
+
             builder.Clear();
             using StringWriter writer = new(builder);
             document.ToHtml(writer, formatter);
