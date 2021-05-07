@@ -10,17 +10,6 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
 <a href='https://dotnetfoundation.org' alt='Part of the .NET Foundation'><img src='https://raw.githubusercontent.com/VerifyTests/Verify/master/docs/dotNetFoundation.svg' height='30px'></a><br>
 Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 
-<!-- toc -->
-## Contents
-
-  * [Comparer Usage](#comparer-usage)
-    * [Initialize](#initialize)
-    * [Verify html](#verify-html)
-    * [Diff results](#diff-results)
-    * [Test level settings](#test-level-settings)
-  * [Pretty Print](#pretty-print)
-  * [Security contact information](#security-contact-information)<!-- endToc -->
-
 
 ## NuGet package
 
