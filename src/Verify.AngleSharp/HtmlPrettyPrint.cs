@@ -19,7 +19,6 @@ namespace Verify.AngleSharp
         public static void PrettyPrintHtml(
             this VerifySettings settings)
         {
-            Guard.AgainstNull(settings, nameof(settings));
             settings.AddScrubber("html", Scrubber);
             settings.AddScrubber("htm", Scrubber);
         }
@@ -29,22 +28,15 @@ namespace Verify.AngleSharp
         public static SettingsTask PrettyPrintHtml(
             this SettingsTask settings)
         {
-            Guard.AgainstNull(settings, nameof(settings));
             settings.AddScrubber("html", Scrubber);
             settings.AddScrubber("htm", Scrubber);
             return settings;
         }
 
-        static PrettyMarkupFormatter formatter = new()
-        {
-            Indentation = "  ",
-            NewLine = "\n"
-        };
-
         static StringBuilder CleanSource(StringBuilder builder)
         {
             var source = builder.ToString();
-            HtmlParser parser = new();
+            var parser = new HtmlParser();
             INodeList document;
             if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
                 source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
@@ -58,7 +50,12 @@ namespace Verify.AngleSharp
             }
 
             builder.Clear();
-            using StringWriter writer = new(builder);
+            var formatter = new PrettyMarkupFormatter
+            {
+                Indentation = "  ",
+                NewLine = "\n"
+            };
+            using var writer = new StringWriter(builder);
             document.ToHtml(writer, formatter);
             writer.Flush();
             return builder;

@@ -15,7 +15,6 @@ namespace VerifyTests
             this VerifySettings settings,
             Action<IDiffingStrategyCollection> options)
         {
-            Guard.AgainstNull(settings, nameof(settings));
             settings.Context["AngleSharpDiffing"] = new CompareSettings(options);
         }
 
@@ -23,7 +22,6 @@ namespace VerifyTests
             this SettingsTask settings,
             Action<IDiffingStrategyCollection> options)
         {
-            Guard.AgainstNull(settings, nameof(settings));
             settings.CurrentSettings.AngleSharpDiffingSettings(options);
             return settings;
         }
@@ -76,7 +74,7 @@ namespace VerifyTests
             var diffs = builder.Build().ToList();
             if (diffs.Any())
             {
-                StringBuilder stringBuilder = new(Environment.NewLine);
+                var stringBuilder = new StringBuilder(Environment.NewLine);
                 foreach (var diff in diffs)
                 {
                     DiffConverter.Append(diff, stringBuilder);
