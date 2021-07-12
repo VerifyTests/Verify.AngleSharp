@@ -12,6 +12,7 @@ public class Samples
     static Samples()
     {
         #region Initialize
+
         VerifyAngleSharpDiffing.Initialize(
             action =>
             {
@@ -30,10 +31,12 @@ public class Samples
                 var options = action.AddDefaultOptions();
                 options.AddFilter(SpanFilter);
             });
+
         #endregion
     }
 
     #region PrettyPrintHtml
+
     [Test]
     public Task PrettyPrintHtml()
     {
@@ -48,6 +51,7 @@ public class Samples
     #endregion
 
     #region Sample
+
     [Test]
     public Task Sample()
     {
@@ -70,7 +74,8 @@ public class Samples
     public Task CustomOptions()
     {
         #region CustomOptions
-        VerifySettings settings = new();
+
+        var settings = new VerifySettings();
         settings.UseExtension("html");
         settings.AngleSharpDiffingSettings(
             action =>
@@ -90,7 +95,9 @@ public class Samples
                 var options = action.AddDefaultOptions();
                 options.AddFilter(SpanFilter);
             });
+
         #endregion
+
         var html = @"<!DOCTYPE html>
 <html>
 <body>
