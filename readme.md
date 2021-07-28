@@ -47,7 +47,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L14-L35' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L15-L36' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -90,7 +90,7 @@ public Task Sample()
         .UseExtension("html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L53-L71' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L80-L98' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -139,7 +139,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L76-L99' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L103-L126' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -161,7 +161,7 @@ public Task PrettyPrintHtml()
         .PrettyPrintHtml();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L38-L51' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L39-L52' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -183,3 +183,51 @@ Results in
 
 To apply this to all `html` files use `HtmlPrettyPrint.All();`
 
+
+### Manipulate Html
+
+Nodes can be manipulated as part of the pretty print:
+
+<!-- snippet: PrettyPrintHtmlWithNodeManipulation -->
+<a id='snippet-prettyprinthtmlwithnodemanipulation'></a>
+```cs
+[Test]
+public Task PrettyPrintHtmlWithNodeManipulation()
+{
+    var html = @"<!DOCTYPE html>
+<html>
+<body>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</body>
+</html>";
+    return Verifier.Verify(html)
+        .UseExtension("html")
+        .PrettyPrintHtml(
+            nodes =>
+            {
+                foreach (var node in nodes.QuerySelectorAll("h1"))
+                {
+                    node.Remove();
+                }
+            });
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L54-L78' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in 
+
+<!-- snippet: Samples.PrettyPrintHtmlWithNodeManipulation.verified.html -->
+<a id='snippet-Samples.PrettyPrintHtmlWithNodeManipulation.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p>My first paragraph.</p>
+  </body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.PrettyPrintHtmlWithNodeManipulation.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtmlWithNodeManipulation.verified.html' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->

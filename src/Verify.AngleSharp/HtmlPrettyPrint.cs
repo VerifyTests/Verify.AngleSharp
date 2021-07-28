@@ -10,44 +10,34 @@ namespace Verify.AngleSharp
 {
     public static class HtmlPrettyPrint
     {
-        public static void All()
+        public static void All(Action<INodeList>? action = null)
         {
-            VerifierSettings.AddScrubber("html", Scrubber);
-            VerifierSettings.AddScrubber("htm", Scrubber);
+            VerifierSettings.AddScrubber("html", builder => CleanSource(builder, action));
+            VerifierSettings.AddScrubber("htm", builder => CleanSource(builder, action));
         }
 
         public static void PrettyPrintHtml(
-            this VerifySettings settings)
+            this VerifySettings settings,
+            Action<INodeList>? action = null)
         {
-            settings.AddScrubber("html", Scrubber);
-            settings.AddScrubber("htm", Scrubber);
+            settings.AddScrubber("html", builder => CleanSource(builder, action));
+            settings.AddScrubber("htm", builder => CleanSource(builder, action));
         }
 
-        static void Scrubber(StringBuilder builder) => CleanSource(builder);
-
         public static SettingsTask PrettyPrintHtml(
-            this SettingsTask settings)
+            this SettingsTask settings,
+            Action<INodeList>? action = null)
         {
-            settings.AddScrubber("html", Scrubber);
-            settings.AddScrubber("htm", Scrubber);
+            settings.AddScrubber("html", builder => CleanSource(builder, action));
+            settings.AddScrubber("htm", builder => CleanSource(builder, action));
             return settings;
         }
 
-        static StringBuilder CleanSource(StringBuilder builder)
+        static StringBuilder CleanSource(StringBuilder builder, Action<INodeList>? action)
         {
             var source = builder.ToString();
-            var parser = new HtmlParser();
-            INodeList document;
-            if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
-                source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
-            {
-                document = parser.ParseFragment(source, null);
-            }
-            else
-            {
-                var dom = parser.ParseDocument("<html><body></body></html>");
-                document = parser.ParseFragment(source, dom.Body);
-            }
+            var document = Parse(source);
+            action?.Invoke(document);
 
             builder.Clear();
             var formatter = new PrettyMarkupFormatter
@@ -59,6 +49,19 @@ namespace Verify.AngleSharp
             document.ToHtml(writer, formatter);
             writer.Flush();
             return builder;
+        }
+
+        static INodeList Parse(string source)
+        {
+            var parser = new HtmlParser();
+            if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
+                source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return parser.ParseFragment(source, null);
+            }
+
+            var dom = parser.ParseDocument("<html><body></body></html>");
+            return parser.ParseFragment(source, dom.Body);
         }
     }
 }

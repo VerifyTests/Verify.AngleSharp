@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AngleSharp.Diffing;
 using AngleSharp.Diffing.Core;
+using AngleSharp.Dom;
 using VerifyTests;
 using VerifyNUnit;
 using NUnit.Framework;
@@ -46,6 +47,32 @@ public class Samples
         return Verifier.Verify(html)
             .UseExtension("html")
             .PrettyPrintHtml();
+    }
+
+    #endregion
+
+    #region PrettyPrintHtmlWithNodeManipulation
+
+    [Test]
+    public Task PrettyPrintHtmlWithNodeManipulation()
+    {
+        var html = @"<!DOCTYPE html>
+<html>
+  <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+  </body>
+</html>";
+        return Verifier.Verify(html)
+            .UseExtension("html")
+            .PrettyPrintHtml(
+                nodes =>
+                {
+                    foreach (var node in nodes.QuerySelectorAll("h1"))
+                    {
+                        node.Remove();
+                    }
+                });
     }
 
     #endregion
