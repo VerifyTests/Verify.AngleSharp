@@ -57,11 +57,11 @@ namespace Verify.AngleSharp
             if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
                 source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
             {
-                return parser.ParseFragment(source, null);
+                return parser.ParseDocument(source).ChildNodes;
             }
 
             var dom = parser.ParseDocument("<html><body></body></html>");
-            return parser.ParseFragment(source, dom.Body);
+            return parser.ParseFragment(source, dom.Body!);
         }
     }
 }
