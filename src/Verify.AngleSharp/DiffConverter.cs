@@ -1,5 +1,4 @@
-﻿using System.Text;
-using AngleSharp.Diffing.Core;
+﻿using AngleSharp.Diffing.Core;
 
 static class DiffConverter
 {

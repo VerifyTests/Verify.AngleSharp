@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using AngleSharp.Diffing;
+﻿using AngleSharp.Diffing;
 using AngleSharp.Diffing.Core;
 using AngleSharp.Dom;
 using VerifyTests;

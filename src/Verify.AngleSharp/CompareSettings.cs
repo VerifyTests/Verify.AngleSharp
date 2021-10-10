@@ -1,5 +1,4 @@
-﻿using System;
-using AngleSharp.Diffing.Strategies;
+﻿using AngleSharp.Diffing.Strategies;
 
 class CompareSettings
 {
