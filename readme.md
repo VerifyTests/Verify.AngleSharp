@@ -6,7 +6,7 @@
 Extends [Verify](https://github.com/VerifyTests/Verify) with Html verification utilities via [AngleSharp](https://github.com/AngleSharp/AngleSharp).
 
 <a href='https://dotnetfoundation.org' alt='Part of the .NET Foundation'><img src='https://raw.githubusercontent.com/VerifyTests/Verify/master/docs/dotNetFoundation.svg' height='30px'></a><br>
-Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
+Part of the [.NET Foundation](https://dotnetfoundation.org)
 
 
 ## NuGet package
