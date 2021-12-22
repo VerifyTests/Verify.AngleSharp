@@ -43,7 +43,7 @@ public class Samples
         var html = @"<!DOCTYPE html>
 <html><body><h1>My First Heading</h1>
 <p>My first paragraph.</p></body></html>";
-        return Verifier.Verify(html)
+        return Verify(html)
             .UseExtension("html")
             .PrettyPrintHtml();
     }
@@ -62,7 +62,7 @@ public class Samples
     <p>My first paragraph.</p>
   </body>
 </html>";
-        return Verifier.Verify(html)
+        return Verify(html)
             .UseExtension("html")
             .PrettyPrintHtml(
                 nodes =>
@@ -90,7 +90,7 @@ public class Samples
 
 </body>
 </html>";
-        return Verifier.Verify(html)
+        return Verify(html)
             .UseExtension("html");
     }
 
@@ -133,6 +133,6 @@ public class Samples
 
 </body>
 </html>";
-        return Verifier.Verify(html, settings);
+        return Verify(html, settings);
     }
 }
