@@ -86,7 +86,7 @@ public Task Sample()
 
 </body>
 </html>";
-    return Verifier.Verify(html)
+    return Verify(html)
         .UseExtension("html");
 }
 ```
@@ -156,7 +156,7 @@ public Task PrettyPrintHtml()
     var html = @"<!DOCTYPE html>
 <html><body><h1>My First Heading</h1>
 <p>My first paragraph.</p></body></html>";
-    return Verifier.Verify(html)
+    return Verify(html)
         .UseExtension("html")
         .PrettyPrintHtml();
 }
@@ -201,7 +201,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
 <p>My first paragraph.</p>
 </body>
 </html>";
-    return Verifier.Verify(html)
+    return Verify(html)
         .UseExtension("html")
         .PrettyPrintHtml(
             nodes =>
