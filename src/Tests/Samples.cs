@@ -1,10 +1,7 @@
 ﻿using AngleSharp.Diffing;
 using AngleSharp.Diffing.Core;
 using AngleSharp.Dom;
-using VerifyTests;
-using VerifyNUnit;
-using NUnit.Framework;
-using Verify.AngleSharp;
+using VerifyTests.AngleSharp;
 
 [TestFixture]
 public class Samples

@@ -1,9 +1,8 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html;
 using AngleSharp.Html.Parser;
-using VerifyTests;
 
-namespace Verify.AngleSharp;
+namespace VerifyTests.AngleSharp;
 
 public static class HtmlPrettyPrint
 {
