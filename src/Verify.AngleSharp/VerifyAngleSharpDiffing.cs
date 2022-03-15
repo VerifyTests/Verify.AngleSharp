@@ -8,10 +8,8 @@ public static class VerifyAngleSharpDiffing
 {
     public static void AngleSharpDiffingSettings(
         this VerifySettings settings,
-        Action<IDiffingStrategyCollection> options)
-    {
+        Action<IDiffingStrategyCollection> options) =>
         settings.Context["AngleSharpDiffing"] = new CompareSettings(options);
-    }
 
     public static SettingsTask AngleSharpDiffingSettings(
         this SettingsTask settings,
