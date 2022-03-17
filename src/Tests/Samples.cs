@@ -6,32 +6,6 @@ using VerifyTests.AngleSharp;
 [TestFixture]
 public class Samples
 {
-    static Samples()
-    {
-        #region Initialize
-
-        VerifyAngleSharpDiffing.Initialize(
-            action =>
-            {
-                static FilterDecision SpanFilter(
-                    in ComparisonSource source,
-                    FilterDecision decision)
-                {
-                    if (source.Node.NodeName == "SPAN")
-                    {
-                        return FilterDecision.Exclude;
-                    }
-
-                    return decision;
-                }
-
-                var options = action.AddDefaultOptions();
-                options.AddFilter(SpanFilter);
-            });
-
-        #endregion
-    }
-
     #region PrettyPrintHtml
 
     [Test]
@@ -131,5 +105,31 @@ public class Samples
 </body>
 </html>";
         return Verify(html, settings);
+    }
+
+    void CustomOptionsGlobal()
+    {
+        #region CustomOptionsGlobal
+
+        VerifyAngleSharpDiffing.Initialize(
+            action =>
+            {
+                static FilterDecision SpanFilter(
+                    in ComparisonSource source,
+                    FilterDecision decision)
+                {
+                    if (source.Node.NodeName == "SPAN")
+                    {
+                        return FilterDecision.Exclude;
+                    }
+
+                    return decision;
+                }
+
+                var options = action.AddDefaultOptions();
+                options.AddFilter(SpanFilter);
+            });
+
+        #endregion
     }
 }

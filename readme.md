@@ -26,26 +26,9 @@ Initialize takes an optional `Action<IDiffingStrategyCollection>` to control set
 <!-- snippet: Initialize -->
 <a id='snippet-initialize'></a>
 ```cs
-VerifyAngleSharpDiffing.Initialize(
-    action =>
-    {
-        static FilterDecision SpanFilter(
-            in ComparisonSource source,
-            FilterDecision decision)
-        {
-            if (source.Node.NodeName == "SPAN")
-            {
-                return FilterDecision.Exclude;
-            }
-
-            return decision;
-        }
-
-        var options = action.AddDefaultOptions();
-        options.AddFilter(SpanFilter);
-    });
+VerifyAngleSharpDiffing.Initialize();
 ```
-<sup><a href='/src/Tests/Samples.cs#L11-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L6-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -88,7 +71,7 @@ public Task Sample()
         .UseExtension("html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L76-L94' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L50-L68' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -137,7 +120,35 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L99-L122' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L73-L96' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+### Global settings
+
+<!-- snippet: CustomOptionsGlobal -->
+<a id='snippet-customoptionsglobal'></a>
+```cs
+VerifyAngleSharpDiffing.Initialize(
+    action =>
+    {
+        static FilterDecision SpanFilter(
+            in ComparisonSource source,
+            FilterDecision decision)
+        {
+            if (source.Node.NodeName == "SPAN")
+            {
+                return FilterDecision.Exclude;
+            }
+
+            return decision;
+        }
+
+        var options = action.AddDefaultOptions();
+        options.AddFilter(SpanFilter);
+    });
+```
+<sup><a href='/src/Tests/Samples.cs#L112-L133' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -159,7 +170,7 @@ public Task PrettyPrintHtml()
         .PrettyPrintHtml();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L35-L48' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L9-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -211,7 +222,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L50-L74' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L24-L48' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -229,3 +240,4 @@ Results in
 ```
 <sup><a href='/src/Tests/Samples.PrettyPrintHtmlWithNodeManipulation.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtmlWithNodeManipulation.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
