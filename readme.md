@@ -71,7 +71,7 @@ public Task Sample()
         .UseExtension("html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L65-L83' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L114-L132' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -120,7 +120,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L88-L111' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L137-L160' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -148,7 +148,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L127-L148' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L176-L197' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -222,7 +222,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L39-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L88-L112' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -241,3 +241,130 @@ Results in
 <sup><a href='/src/Tests/Samples.PrettyPrintHtmlWithNodeManipulation.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.PrettyPrintHtmlWithNodeManipulation.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+
+## AngleSharp helpers
+
+
+### ScrubEmptyDivs
+
+<!-- snippet: ScrubEmptyDivs -->
+<a id='snippet-scrubemptydivs'></a>
+```cs
+[Test]
+public Task ScrubEmptyDivs()
+{
+    var html = @"<!DOCTYPE html>
+<html>
+<body>
+<div>My First Heading</div>
+<div></div>
+</body>
+</html>";
+    return Verify(html)
+        .UseExtension("html")
+        .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L24-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubemptydivs' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in:
+
+<!-- snippet: Samples.ScrubEmptyDivs.verified.html -->
+<a id='snippet-Samples.ScrubEmptyDivs.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div>My First Heading</div>
+  </body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.ScrubEmptyDivs.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubEmptyDivs.verified.html' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+### ScrubAttributes
+
+<!-- snippet: ScrubAttributes -->
+<a id='snippet-scrubattributes'></a>
+```cs
+[Test]
+public Task ScrubAttributes()
+{
+    var html = @"<!DOCTYPE html>
+<html>
+<body>
+<div id='a'>My First Heading</div>
+</body>
+</html>";
+    return Verify(html)
+        .UseExtension("html")
+        .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L43-L59' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributes' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in:
+
+<!-- snippet: Samples.ScrubAttributes.verified.html -->
+<a id='snippet-Samples.ScrubAttributes.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div>My First Heading</div>
+  </body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.ScrubAttributes.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubAttributes.verified.html' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
+<!-- snippet: ScrubAttributeWithNewValue -->
+<a id='snippet-scrubattributewithnewvalue'></a>
+```cs
+[Test]
+public Task ScrubAttributeWithNewValue()
+{
+    var html = @"<!DOCTYPE html>
+<html>
+<body>
+<div id='a'>My First Heading</div>
+</body>
+</html>";
+    return Verify(html)
+        .UseExtension("html")
+        .PrettyPrintHtml(
+            nodes => nodes.ScrubAttributes(x =>
+            {
+                if (x.Name == "id")
+                {
+                    return "new value";
+                }
+
+                return null;
+            }));
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L61-L86' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributewithnewvalue' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in:
+
+<!-- snippet: Samples.ScrubAttributeWithNewValue.verified.html -->
+<a id='snippet-Samples.ScrubAttributeWithNewValue.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="new value">My First Heading</div>
+  </body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.ScrubAttributeWithNewValue.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubAttributeWithNewValue.verified.html' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->

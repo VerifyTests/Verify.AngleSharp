@@ -14,37 +14,81 @@ public static class HtmlPrettyPrint
         VerifierSettings.AddScrubber("htm", builder => CleanSource(builder, action));
     }
 
-    public static void ScrubEmptyDivs(this INodeList nodes)
+    public static void ScrubEmptyDivs(this INodeList nodes) =>
+        ScrubEmptyDivs(nodes.OfType<IElement>());
+
+    public static void ScrubEmptyDivs(this IEnumerable<IElement> elements)
     {
-        foreach (var element in nodes.DescendentsAndSelf<IElement>())
+        foreach (var element in elements.DescendentsAndSelf<IElement>())
         {
-            CleanIfDiv(element);
+            TryScrubDiv(element);
         }
     }
 
-    static void CleanIfDiv(IElement node)
+    public static bool TryScrubDiv(this IElement element)
     {
-        if (node is not IHtmlDivElement div)
+        if (element is not IHtmlDivElement div)
         {
-            return;
+            return false;
         }
 
         div.InnerHtml = div.InnerHtml.TrimEnd();
-        if (node.HasAttributes())
+        if (element.HasAttributes())
         {
-            return;
+            return false;
         }
 
-        if (!node.HasChildNodes)
+        if (!element.HasChildNodes)
         {
-            node.RemoveFromParent();
-            return;
+            element.RemoveFromParent();
+        }
+        else if (element.Children.Length == 1)
+        {
+            var child = element.FirstChild;
+            element.Parent!.AppendChild(child);
         }
 
-        if (node.Children.Length == 1)
+        return true;
+    }
+
+    public static void ScrubAttributes(this INodeList nodes, string name) =>
+        ScrubAttributes(nodes.OfType<IElement>(), name);
+
+    public static void ScrubAttributes(this INodeList nodes, Func<IAttr, bool> match) =>
+        ScrubAttributes(nodes.OfType<IElement>(), match);
+
+    public static void ScrubAttributes(this INodeList nodes, Func<IAttr, string?> match) =>
+        ScrubAttributes(nodes.OfType<IElement>(), match);
+
+    public static void ScrubAttributes(this IEnumerable<IElement> elements, string name) =>
+        elements.ScrubAttributes(x => x.Name == name);
+
+    public static void ScrubAttributes(this IEnumerable<IElement> elements, Func<IAttr, string?> tryGetValue)
+    {
+        foreach (var element in elements.DescendentsAndSelf<IElement>())
         {
-            var child = node.FirstChild;
-            node.Parent!.AppendChild(child);
+            foreach (var attribute in element.Attributes)
+            {
+                var value = tryGetValue(attribute);
+                if (value!= null)
+                {
+                    attribute.Value = value;
+                }
+            }
+        }
+    }
+
+    public static void ScrubAttributes(this IEnumerable<IElement> elements, Func<IAttr, bool> match)
+    {
+        foreach (var element in elements.DescendentsAndSelf<IElement>())
+        {
+            foreach (var attribute in element.Attributes.ToList())
+            {
+                if (match(attribute))
+                {
+                    element.RemoveAttribute(attribute.Name);
+                }
+            }
         }
     }
 

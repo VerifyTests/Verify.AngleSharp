@@ -21,8 +21,10 @@ public class Samples
 
     #endregion
 
+    #region ScrubEmptyDivs
+
     [Test]
-    public Task EmptyDiv()
+    public Task ScrubEmptyDivs()
     {
         var html = @"<!DOCTYPE html>
 <html>
@@ -35,6 +37,53 @@ public class Samples
             .UseExtension("html")
             .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
     }
+
+    #endregion
+
+    #region ScrubAttributes
+
+    [Test]
+    public Task ScrubAttributes()
+    {
+        var html = @"<!DOCTYPE html>
+<html>
+  <body>
+    <div id='a'>My First Heading</div>
+  </body>
+</html>";
+        return Verify(html)
+            .UseExtension("html")
+            .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
+    }
+
+    #endregion
+
+    #region ScrubAttributeWithNewValue
+
+    [Test]
+    public Task ScrubAttributeWithNewValue()
+    {
+        var html = @"<!DOCTYPE html>
+<html>
+  <body>
+    <div id='a'>My First Heading</div>
+  </body>
+</html>";
+        return Verify(html)
+            .UseExtension("html")
+            .PrettyPrintHtml(
+                nodes => nodes.ScrubAttributes(x =>
+                {
+                    if (x.Name == "id")
+                    {
+                        return "new value";
+                    }
+
+                    return null;
+                }));
+    }
+
+    #endregion
 
     #region PrettyPrintHtmlWithNodeManipulation
 
