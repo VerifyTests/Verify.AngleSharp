@@ -21,6 +21,21 @@ public class Samples
 
     #endregion
 
+    [Test]
+    public Task EmptyDiv()
+    {
+        var html = @"<!DOCTYPE html>
+<html>
+  <body>
+    <div>My First Heading</div>
+    <div></div>
+  </body>
+</html>";
+        return Verify(html)
+            .UseExtension("html")
+            .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
+    }
+
     #region PrettyPrintHtmlWithNodeManipulation
 
     [Test]

@@ -71,7 +71,7 @@ public Task Sample()
         .UseExtension("html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L50-L68' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L65-L83' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -120,7 +120,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L73-L96' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L88-L111' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -148,7 +148,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L112-L133' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L127-L148' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -222,7 +222,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L24-L48' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L39-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 

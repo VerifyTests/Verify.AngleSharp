@@ -1,5 +1,7 @@
-﻿using AngleSharp.Dom;
+﻿using AngleSharp.Diffing.Extensions;
+using AngleSharp.Dom;
 using AngleSharp.Html;
+using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
 
 namespace VerifyTests.AngleSharp;
@@ -10,6 +12,40 @@ public static class HtmlPrettyPrint
     {
         VerifierSettings.AddScrubber("html", builder => CleanSource(builder, action));
         VerifierSettings.AddScrubber("htm", builder => CleanSource(builder, action));
+    }
+
+    public static void ScrubEmptyDivs(this INodeList nodes)
+    {
+        foreach (var element in nodes.DescendentsAndSelf<IElement>())
+        {
+            CleanIfDiv(element);
+        }
+    }
+
+    static void CleanIfDiv(IElement node)
+    {
+        if (node is not IHtmlDivElement div)
+        {
+            return;
+        }
+
+        div.InnerHtml = div.InnerHtml.TrimEnd();
+        if (node.HasAttributes())
+        {
+            return;
+        }
+
+        if (!node.HasChildNodes)
+        {
+            node.RemoveFromParent();
+            return;
+        }
+
+        if (node.Children.Length == 1)
+        {
+            var child = node.FirstChild;
+            node.Parent!.AppendChild(child);
+        }
     }
 
     public static void PrettyPrintHtml(
