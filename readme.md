@@ -287,6 +287,9 @@ Results in:
 
 ### ScrubAttributes
 
+
+#### Removal
+
 <!-- snippet: ScrubAttributes -->
 <a id='snippet-scrubattributes'></a>
 ```cs
@@ -323,6 +326,8 @@ Results in:
 <sup><a href='/src/Tests/Samples.ScrubAttributes.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubAttributes.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+
+#### Replace Value
 
 <!-- snippet: ScrubAttributeWithNewValue -->
 <a id='snippet-scrubattributewithnewvalue'></a>
