@@ -1,12 +1,14 @@
 ﻿public static class ModuleInitializer
 {
+    #region Initialize
+
     [ModuleInitializer]
     public static void Init()
     {
-        #region Initialize
-
         VerifyAngleSharpDiffing.Initialize();
 
         #endregion
+
+        VerifyDiffPlex.Initialize();
     }
 }

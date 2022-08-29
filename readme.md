@@ -26,9 +26,12 @@ Initialize takes an optional `Action<IDiffingStrategyCollection>` to control set
 <!-- snippet: Initialize -->
 <a id='snippet-initialize'></a>
 ```cs
-VerifyAngleSharpDiffing.Initialize();
+[ModuleInitializer]
+public static void Init()
+{
+    VerifyAngleSharpDiffing.Initialize();
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L6-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
