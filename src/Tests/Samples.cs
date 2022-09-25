@@ -14,8 +14,7 @@ public class Samples
         var html = @"<!DOCTYPE html>
 <html><body><h1>My First Heading</h1>
 <p>My first paragraph.</p></body></html>";
-        return Verify(html)
-            .UseExtension("html")
+        return Verify(html, "html")
             .PrettyPrintHtml();
     }
 
@@ -33,8 +32,7 @@ public class Samples
     <div></div>
   </body>
 </html>";
-        return Verify(html)
-            .UseExtension("html")
+        return Verify(html, "html")
             .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
     }
 
@@ -51,8 +49,7 @@ public class Samples
     <div id='a'>My First Heading</div>
   </body>
 </html>";
-        return Verify(html)
-            .UseExtension("html")
+        return Verify(html, "html")
             .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
     }
 
@@ -69,8 +66,7 @@ public class Samples
     <div id='a'>My First Heading</div>
   </body>
 </html>";
-        return Verify(html)
-            .UseExtension("html")
+        return Verify(html, "html")
             .PrettyPrintHtml(
                 nodes => nodes.ScrubAttributes(x =>
                 {
@@ -97,8 +93,7 @@ public class Samples
     <p>My first paragraph.</p>
   </body>
 </html>";
-        return Verify(html)
-            .UseExtension("html")
+        return Verify(html, "html")
             .PrettyPrintHtml(
                 nodes =>
                 {
@@ -125,8 +120,7 @@ public class Samples
 
 </body>
 </html>";
-        return Verify(html)
-            .UseExtension("html");
+        return Verify(html, "html");
     }
 
     #endregion
@@ -137,7 +131,6 @@ public class Samples
         #region CustomOptions
 
         var settings = new VerifySettings();
-        settings.UseExtension("html");
         settings.AngleSharpDiffingSettings(
             action =>
             {
@@ -168,7 +161,7 @@ public class Samples
 
 </body>
 </html>";
-        return Verify(html, settings);
+        return Verify(html, "html", settings);
     }
 
     void CustomOptionsGlobal()

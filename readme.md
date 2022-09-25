@@ -70,11 +70,10 @@ public Task Sample()
 
 </body>
 </html>";
-    return Verify(html)
-        .UseExtension("html");
+    return Verify(html, "html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L114-L132' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L109-L126' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -103,7 +102,6 @@ Settings can also be controlled for a specific test.
 <a id='snippet-customoptions'></a>
 ```cs
 var settings = new VerifySettings();
-settings.UseExtension("html");
 settings.AngleSharpDiffingSettings(
     action =>
     {
@@ -123,7 +121,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L137-L160' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L131-L153' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -151,7 +149,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L176-L197' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L169-L190' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -168,12 +166,11 @@ public Task PrettyPrintHtml()
     var html = @"<!DOCTYPE html>
 <html><body><h1>My First Heading</h1>
 <p>My first paragraph.</p></body></html>";
-    return Verify(html)
-        .UseExtension("html")
+    return Verify(html, "html")
         .PrettyPrintHtml();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L9-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L9-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -213,8 +210,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
 <p>My first paragraph.</p>
 </body>
 </html>";
-    return Verify(html)
-        .UseExtension("html")
+    return Verify(html, "html")
         .PrettyPrintHtml(
             nodes =>
             {
@@ -225,7 +221,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L88-L112' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L84-L107' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -263,12 +259,11 @@ public Task ScrubEmptyDivs()
 <div></div>
 </body>
 </html>";
-    return Verify(html)
-        .UseExtension("html")
+    return Verify(html, "html")
         .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L24-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubemptydivs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L23-L39' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubemptydivs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -305,12 +300,11 @@ public Task ScrubAttributes()
 <div id='a'>My First Heading</div>
 </body>
 </html>";
-    return Verify(html)
-        .UseExtension("html")
+    return Verify(html, "html")
         .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L43-L59' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributes' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L41-L56' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributes' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -344,8 +338,7 @@ public Task ScrubAttributeWithNewValue()
 <div id='a'>My First Heading</div>
 </body>
 </html>";
-    return Verify(html)
-        .UseExtension("html")
+    return Verify(html, "html")
         .PrettyPrintHtml(
             nodes => nodes.ScrubAttributes(x =>
             {
@@ -358,7 +351,7 @@ public Task ScrubAttributeWithNewValue()
             }));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L61-L86' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributewithnewvalue' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L58-L82' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributewithnewvalue' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
