@@ -35,6 +35,7 @@ public static class VerifyAngleSharpDiffing
 
     public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
     {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         Task<CompareResult> Func(string received, string verified, IReadOnlyDictionary<string, object> context)
         {
             var compare = Compare(received, verified, context, action);
