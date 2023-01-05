@@ -70,7 +70,7 @@ public static class HtmlPrettyPrint
             foreach (var attribute in element.Attributes)
             {
                 var value = tryGetValue(attribute);
-                if (value!= null)
+                if (value != null)
                 {
                     attribute.Value = value;
                 }
