@@ -42,6 +42,8 @@ public static class VerifyAngleSharpDiffing
             throw new("Already Initialized");
         }
 
+        Initialized = true;
+
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         Task<CompareResult> Func(string received, string verified, IReadOnlyDictionary<string, object> context)
         {
