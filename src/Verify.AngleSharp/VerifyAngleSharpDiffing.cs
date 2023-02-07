@@ -33,8 +33,15 @@ public static class VerifyAngleSharpDiffing
         return false;
     }
 
+    public static bool Initialized { get; private set; }
+
     public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
     {
+        if (Initialized)
+        {
+            throw new("Already Initialized");
+        }
+
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         Task<CompareResult> Func(string received, string verified, IReadOnlyDictionary<string, object> context)
         {

@@ -9,10 +9,6 @@
     #endregion
 
     [ModuleInitializer]
-    public static void InitOther()
-    {
-        
-        VerifyDiffPlex.Initialize();
-        
-    }
+    public static void InitOther() =>
+        VerifierSettings.InitializePlugins();
 }
