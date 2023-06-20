@@ -61,7 +61,7 @@ public static class HtmlPrettyPrint
         ScrubAttributes(nodes.OfType<IElement>(), match);
 
     public static void ScrubAttributes(this IEnumerable<IElement> elements, string name) =>
-        elements.ScrubAttributes(x => x.Name == name);
+        elements.ScrubAttributes(_ => _.Name == name);
 
     public static void ScrubAttributes(this IEnumerable<IElement> elements, Func<IAttr, string?> tryGetValue)
     {

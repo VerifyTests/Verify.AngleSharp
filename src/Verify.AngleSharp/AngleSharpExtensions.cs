@@ -23,16 +23,16 @@ public static class AngleSharpExtensions
         nodes.Descendents().OfType<TNode>();
 
     public static IEnumerable<TNode> Descendents<TNode>(this IEnumerable<INode> elements) =>
-        elements.SelectMany(x => x.Descendents<TNode>());
+        elements.SelectMany(_ => _.Descendents<TNode>());
 
     public static IEnumerable<INode> Descendents(this IEnumerable<INode> elements) =>
-        elements.SelectMany(x => x.Descendents());
+        elements.SelectMany(_ => _.Descendents());
 
     public static IEnumerable<TNode> DescendentsAndSelf<TNode>(this IEnumerable<INode> elements) =>
-        elements.SelectMany(x => x.DescendentsAndSelf<TNode>());
+        elements.SelectMany(_ => _.DescendentsAndSelf<TNode>());
 
     public static IEnumerable<INode> DescendentsAndSelf(this IEnumerable<INode> elements) =>
-        elements.SelectMany(x => x.DescendentsAndSelf());
+        elements.SelectMany(_ => _.DescendentsAndSelf());
 
     public static IEnumerable<INode> Descendents(this INodeList nodes)
     {
