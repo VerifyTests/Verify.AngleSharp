@@ -1,6 +1,7 @@
 ﻿using AngleSharp.Diffing;
 using AngleSharp.Diffing.Core;
 using AngleSharp.Dom;
+using AngleSharp.Html.Parser;
 using VerifyTests.AngleSharp;
 
 [TestFixture]
@@ -102,6 +103,29 @@ public class Samples
                         node.Remove();
                     }
                 });
+    }
+
+    #endregion
+
+    #region SingleMember
+
+    [Test]
+    public Task SingleMember()
+    {
+        var html = @"<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>";
+        return Verify(
+            new
+            {
+                HtmlProperty = new HtmlParser().ParseDocument(html)
+            });
     }
 
     #endregion
