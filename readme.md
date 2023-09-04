@@ -61,19 +61,21 @@ And a test:
 [Test]
 public Task Sample()
 {
-    var html = @"<!DOCTYPE html>
-<html>
-<body>
+    var html = """
+               <!DOCTYPE html>
+               <html>
+               <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+               <h1>My First Heading</h1>
+               <p>My first paragraph.</p>
 
-</body>
-</html>";
+               </body>
+               </html>
+               """;
     return Verify(html, "html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L133-L150' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L145-L164' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -121,7 +123,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L155-L177' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L169-L191' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -149,7 +151,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L193-L214' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L209-L230' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -163,14 +165,16 @@ Html can be pretty printed.
 [Test]
 public Task PrettyPrintHtml()
 {
-    var html = @"<!DOCTYPE html>
-<html><body><h1>My First Heading</h1>
-<p>My first paragraph.</p></body></html>";
+    var html = """
+               <!DOCTYPE html>
+               <html><body><h1>My First Heading</h1>
+               <p>My first paragraph.</p></body></html>
+               """;
     return Verify(html, "html")
         .PrettyPrintHtml();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L10-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L10-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -203,13 +207,15 @@ Nodes can be manipulated as part of the pretty print:
 [Test]
 public Task PrettyPrintHtmlWithNodeManipulation()
 {
-    var html = @"<!DOCTYPE html>
-<html>
-<body>
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-</body>
-</html>";
+    var html = """
+               <!DOCTYPE html>
+               <html>
+                 <body>
+                   <h1>My First Heading</h1>
+                   <p>My first paragraph.</p>
+                 </body>
+               </html>
+               """;
     return Verify(html, "html")
         .PrettyPrintHtml(
             nodes =>
@@ -221,7 +227,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L85-L108' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L93-L118' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -252,18 +258,20 @@ Results in
 [Test]
 public Task ScrubEmptyDivs()
 {
-    var html = @"<!DOCTYPE html>
-<html>
-<body>
-<div>My First Heading</div>
-<div></div>
-</body>
-</html>";
+    var html = """
+               <!DOCTYPE html>
+               <html>
+                 <body>
+                   <div>My First Heading</div>
+                   <div></div>
+                 </body>
+               </html>
+               """;
     return Verify(html, "html")
         .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L24-L40' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubemptydivs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L26-L44' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubemptydivs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -294,17 +302,19 @@ Results in:
 [Test]
 public Task ScrubAttributes()
 {
-    var html = @"<!DOCTYPE html>
-<html>
-<body>
-<div id='a'>My First Heading</div>
-</body>
-</html>";
+    var html = """
+               <!DOCTYPE html>
+               <html>
+                 <body>
+                   <div id='a'>My First Heading</div>
+                 </body>
+               </html>
+               """;
     return Verify(html, "html")
         .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L42-L57' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributes' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L46-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributes' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -332,12 +342,14 @@ Results in:
 [Test]
 public Task ScrubAttributeWithNewValue()
 {
-    var html = @"<!DOCTYPE html>
-<html>
-<body>
-<div id='a'>My First Heading</div>
-</body>
-</html>";
+    var html = """
+               <!DOCTYPE html>
+               <html>
+                 <body>
+                   <div id='a'>My First Heading</div>
+                 </body>
+               </html>
+               """;
     return Verify(html, "html")
         .PrettyPrintHtml(
             nodes => nodes.ScrubAttributes(x =>
@@ -351,7 +363,7 @@ public Task ScrubAttributeWithNewValue()
             }));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L59-L83' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributewithnewvalue' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L65-L91' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributewithnewvalue' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:

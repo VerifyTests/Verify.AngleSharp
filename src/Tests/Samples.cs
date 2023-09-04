@@ -12,9 +12,11 @@ public class Samples
     [Test]
     public Task PrettyPrintHtml()
     {
-        var html = @"<!DOCTYPE html>
-<html><body><h1>My First Heading</h1>
-<p>My first paragraph.</p></body></html>";
+        var html = """
+                   <!DOCTYPE html>
+                   <html><body><h1>My First Heading</h1>
+                   <p>My first paragraph.</p></body></html>
+                   """;
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
@@ -26,13 +28,15 @@ public class Samples
     [Test]
     public Task ScrubEmptyDivs()
     {
-        var html = @"<!DOCTYPE html>
-<html>
-  <body>
-    <div>My First Heading</div>
-    <div></div>
-  </body>
-</html>";
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <body>
+                       <div>My First Heading</div>
+                       <div></div>
+                     </body>
+                   </html>
+                   """;
         return Verify(html, "html")
             .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
     }
@@ -44,12 +48,14 @@ public class Samples
     [Test]
     public Task ScrubAttributes()
     {
-        var html = @"<!DOCTYPE html>
-<html>
-  <body>
-    <div id='a'>My First Heading</div>
-  </body>
-</html>";
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <body>
+                       <div id='a'>My First Heading</div>
+                     </body>
+                   </html>
+                   """;
         return Verify(html, "html")
             .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
     }
@@ -61,12 +67,14 @@ public class Samples
     [Test]
     public Task ScrubAttributeWithNewValue()
     {
-        var html = @"<!DOCTYPE html>
-<html>
-  <body>
-    <div id='a'>My First Heading</div>
-  </body>
-</html>";
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <body>
+                       <div id='a'>My First Heading</div>
+                     </body>
+                   </html>
+                   """;
         return Verify(html, "html")
             .PrettyPrintHtml(
                 nodes => nodes.ScrubAttributes(x =>
@@ -87,13 +95,15 @@ public class Samples
     [Test]
     public Task PrettyPrintHtmlWithNodeManipulation()
     {
-        var html = @"<!DOCTYPE html>
-<html>
-  <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-  </body>
-</html>";
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <body>
+                       <h1>My First Heading</h1>
+                       <p>My first paragraph.</p>
+                     </body>
+                   </html>
+                   """;
         return Verify(html, "html")
             .PrettyPrintHtml(
                 nodes =>
@@ -112,15 +122,17 @@ public class Samples
     [Test]
     public Task SingleMember()
     {
-        var html = @"<!DOCTYPE html>
-<html>
-<body>
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                   <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+                   <h1>My First Heading</h1>
+                   <p>My first paragraph.</p>
 
-</body>
-</html>";
+                   </body>
+                   </html>
+                   """;
         return Verify(
             new
             {
@@ -135,15 +147,17 @@ public class Samples
     [Test]
     public Task Sample()
     {
-        var html = @"<!DOCTYPE html>
-<html>
-<body>
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                   <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+                   <h1>My First Heading</h1>
+                   <p>My first paragraph.</p>
 
-</body>
-</html>";
+                   </body>
+                   </html>
+                   """;
         return Verify(html, "html");
     }
 
@@ -176,15 +190,17 @@ public class Samples
 
         #endregion
 
-        var html = @"<!DOCTYPE html>
-<html>
-<body>
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                   <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+                   <h1>My First Heading</h1>
+                   <p>My first paragraph.</p>
 
-</body>
-</html>";
+                   </body>
+                   </html>
+                   """;
         return Verify(html, "html", settings);
     }
 
