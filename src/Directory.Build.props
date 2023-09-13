@@ -4,6 +4,7 @@
     <NoWarn>CS1591;CS0649</NoWarn>
     <Version>4.3.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
+    <LangVersion>preview</LangVersion>
     <PackageTags>AngleSharp, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) with Html verification utilities via AngleSharp (https://github.com/AngleSharp/AngleSharp).</Description>
   </PropertyGroup>
