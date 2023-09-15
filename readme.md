@@ -64,18 +64,16 @@ public Task Sample()
     var html = """
                <!DOCTYPE html>
                <html>
-               <body>
-
-               <h1>My First Heading</h1>
-               <p>My first paragraph.</p>
-
-               </body>
+                 <body>
+                   <h1>My First Heading</h1>
+                   <p>My first paragraph.</p>
+                 </body>
                </html>
                """;
     return Verify(html, "html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L145-L164' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L143-L160' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -123,7 +121,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L169-L191' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L165-L187' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -151,7 +149,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L209-L230' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L205-L226' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
