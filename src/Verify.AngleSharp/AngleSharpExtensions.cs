@@ -1,6 +1,4 @@
-﻿using AngleSharp.Dom;
-
-namespace VerifyTests.AngleSharp;
+﻿namespace VerifyTests.AngleSharp;
 
 public static class AngleSharpExtensions
 {

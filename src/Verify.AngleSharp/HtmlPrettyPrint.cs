@@ -1,6 +1,4 @@
-﻿using AngleSharp.Diffing.Extensions;
-using AngleSharp.Dom;
-using AngleSharp.Html;
+﻿using AngleSharp.Html;
 using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
 
