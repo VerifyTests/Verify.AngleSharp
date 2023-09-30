@@ -2,10 +2,10 @@
 
 public static class AngleSharpExtensions
 {
-    public static IEnumerable<TNode> DescendentsAndSelf<TNode>(this INodeList nodes) =>
-        nodes.DescendentsAndSelf().OfType<TNode>();
+    public static IEnumerable<TNode> DescendantsAndSelf<TNode>(this INodeList nodes) =>
+        nodes.DescendantsAndSelf().OfType<TNode>();
 
-    public static IEnumerable<INode> DescendentsAndSelf(this INodeList nodes)
+    public static IEnumerable<INode> DescendantsAndSelf(this INodeList nodes)
     {
         foreach (var node in nodes.ToList())
         {
@@ -17,22 +17,22 @@ public static class AngleSharpExtensions
         }
     }
 
-    public static IEnumerable<TNode> Descendents<TNode>(this INodeList nodes) =>
-        nodes.Descendents().OfType<TNode>();
+    public static IEnumerable<TNode> Descendants<TNode>(this INodeList nodes) =>
+        nodes.Descendants().OfType<TNode>();
 
-    public static IEnumerable<TNode> Descendents<TNode>(this IEnumerable<INode> elements) =>
+    public static IEnumerable<TNode> Descendants<TNode>(this IEnumerable<INode> elements) =>
         elements.SelectMany(_ => _.Descendents<TNode>());
 
-    public static IEnumerable<INode> Descendents(this IEnumerable<INode> elements) =>
+    public static IEnumerable<INode> Descendants(this IEnumerable<INode> elements) =>
         elements.SelectMany(_ => _.Descendents());
 
-    public static IEnumerable<TNode> DescendentsAndSelf<TNode>(this IEnumerable<INode> elements) =>
+    public static IEnumerable<TNode> DescendantsAndSelf<TNode>(this IEnumerable<INode> elements) =>
         elements.SelectMany(_ => _.DescendentsAndSelf<TNode>());
 
-    public static IEnumerable<INode> DescendentsAndSelf(this IEnumerable<INode> elements) =>
+    public static IEnumerable<INode> DescendantsAndSelf(this IEnumerable<INode> elements) =>
         elements.SelectMany(_ => _.DescendentsAndSelf());
 
-    public static IEnumerable<INode> Descendents(this INodeList nodes)
+    public static IEnumerable<INode> Descendants(this INodeList nodes)
     {
         foreach (var node in nodes.ToList())
         {

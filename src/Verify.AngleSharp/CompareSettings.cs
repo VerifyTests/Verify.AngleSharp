@@ -1,9 +1,4 @@
-﻿using AngleSharp.Diffing.Strategies;
-
-class CompareSettings
+﻿class CompareSettings(Action<IDiffingStrategyCollection> action)
 {
-    public Action<IDiffingStrategyCollection> Action { get; }
-
-    public CompareSettings(Action<IDiffingStrategyCollection> action) =>
-        Action = action;
+    public Action<IDiffingStrategyCollection> Action { get; } = action;
 }

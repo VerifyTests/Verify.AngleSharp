@@ -17,7 +17,7 @@ public static class HtmlPrettyPrint
 
     public static void ScrubEmptyDivs(this IEnumerable<IElement> elements)
     {
-        foreach (var element in elements.DescendentsAndSelf<IElement>())
+        foreach (var element in elements.DescendantsAndSelf<IElement>())
         {
             TryScrubDiv(element);
         }
@@ -63,7 +63,7 @@ public static class HtmlPrettyPrint
 
     public static void ScrubAttributes(this IEnumerable<IElement> elements, Func<IAttr, string?> tryGetValue)
     {
-        foreach (var element in elements.DescendentsAndSelf<IElement>())
+        foreach (var element in elements.DescendantsAndSelf<IElement>())
         {
             foreach (var attribute in element.Attributes)
             {
@@ -78,7 +78,7 @@ public static class HtmlPrettyPrint
 
     public static void ScrubAttributes(this IEnumerable<IElement> elements, Func<IAttr, bool> match)
     {
-        foreach (var element in elements.DescendentsAndSelf<IElement>())
+        foreach (var element in elements.DescendantsAndSelf<IElement>())
         {
             foreach (var attribute in element.Attributes.ToList())
             {

@@ -1,8 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using AngleSharp.Diffing;
-using AngleSharp.Diffing.Strategies;
-
-namespace VerifyTests;
+﻿namespace VerifyTests;
 
 public static class VerifyAngleSharpDiffing
 {
