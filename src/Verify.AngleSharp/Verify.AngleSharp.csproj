@@ -3,7 +3,7 @@
     <TargetFrameworks>net48;net6.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="1.0.4" />
+    <PackageReference Include="AngleSharp" Version="1.0.5" />
     <PackageReference Include="AngleSharp.Css" Version="1.0.0-alpha-99" />
     <PackageReference Include="AngleSharp.Diffing" Version="0.18.2" />
     <PackageReference Include="Polyfill" Version="1.28.0" PrivateAssets="all" />
