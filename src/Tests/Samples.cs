@@ -122,19 +122,21 @@ public class Samples
     [Test]
     public Task SingleMember()
     {
-        var html = """
-                   <!DOCTYPE html>
-                   <html>
-                     <body>
-                       <h1>My First Heading</h1>
-                       <p>My first paragraph.</p>
-                     </body>
-                   </html>
-                   """;
+        var parser = new HtmlParser();
+        var html =
+            """
+            <!DOCTYPE html>
+            <html>
+              <body>
+                <h1>My First Heading</h1>
+                <p>My first paragraph.</p>
+              </body>
+            </html>
+            """;
         return Verify(
             new
             {
-                HtmlProperty = new HtmlParser().ParseDocument(html)
+                HtmlProperty = parser.ParseDocument(html)
             });
     }
 
@@ -145,15 +147,16 @@ public class Samples
     [Test]
     public Task Sample()
     {
-        var html = """
-                   <!DOCTYPE html>
-                   <html>
-                     <body>
-                       <h1>My First Heading</h1>
-                       <p>My first paragraph.</p>
-                     </body>
-                   </html>
-                   """;
+        var html =
+            """
+            <!DOCTYPE html>
+            <html>
+              <body>
+                <h1>My First Heading</h1>
+                <p>My first paragraph.</p>
+              </body>
+            </html>
+            """;
         return Verify(html, "html");
     }
 
@@ -186,17 +189,16 @@ public class Samples
 
         #endregion
 
-        var html = """
-                   <!DOCTYPE html>
-                   <html>
-                   <body>
-
-                   <h1>My First Heading</h1>
-                   <p>My first paragraph.</p>
-
-                   </body>
-                   </html>
-                   """;
+        var html =
+            """
+            <!DOCTYPE html>
+            <html>
+              <body>
+                <h1>My First Heading</h1>
+                <p>My first paragraph.</p>
+              </body>
+            </html>
+            """;
         return Verify(html, "html", settings);
     }
 
