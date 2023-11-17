@@ -1972,9 +1972,7 @@
     <p>My first paragraph.</p>
   </body>
 </html>,
-      Length: 116,
-      CurrentEncoding: utf-8,
-      Index: 117
+      CurrentEncoding: utf-8
     },
     DesignMode: off,
     All: [

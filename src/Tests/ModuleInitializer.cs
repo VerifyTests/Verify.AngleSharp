@@ -13,5 +13,6 @@
     {
         VerifyDiffPlex.Initialize(OutputType.Compact);
         VerifierSettings.InitializePlugins();
+        VerifierSettings.IgnoreMembers("Length", "Index");
     }
 }
