@@ -101,7 +101,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -124,13 +123,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -153,6 +152,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -193,7 +193,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -216,13 +215,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -245,6 +244,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -286,7 +286,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -309,13 +308,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -338,6 +337,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -378,7 +378,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -401,13 +400,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -430,6 +429,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -444,7 +444,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -467,13 +466,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           Children: [],
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -496,6 +495,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         {
@@ -540,7 +540,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -563,6 +562,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           ChildElementCount: 2,
@@ -605,7 +605,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -628,13 +627,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -657,6 +656,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -697,7 +697,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -720,13 +719,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -749,6 +748,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -790,7 +790,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -813,13 +812,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -842,6 +841,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -882,7 +882,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -905,13 +904,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -934,6 +933,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -948,7 +948,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -971,6 +970,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         }
       ],
@@ -1052,7 +1052,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -1075,13 +1074,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -1104,6 +1103,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -1144,7 +1144,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -1167,13 +1166,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -1196,6 +1195,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -1237,7 +1237,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -1260,13 +1259,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -1289,6 +1288,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -1329,7 +1329,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -1352,13 +1351,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -1381,6 +1380,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -1395,7 +1395,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -1418,13 +1417,13 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         Children: [],
         InnerHtml: ,
         OuterHtml: <head></head>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: false,
         BaseUri: about:blank,
         BaseUrl: {
@@ -1447,6 +1446,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         NodeName: HEAD
       },
       LastElementChild: {
@@ -1491,7 +1491,6 @@
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -1514,6 +1513,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         ChildElementCount: 2,
@@ -1556,7 +1556,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -1579,13 +1578,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -1608,6 +1607,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           {
@@ -1648,7 +1648,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -1671,13 +1670,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -1700,6 +1699,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           }
         ],
@@ -1741,7 +1741,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -1764,13 +1763,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           Children: [],
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -1793,6 +1792,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         LastElementChild: {
@@ -1833,7 +1833,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -1856,13 +1855,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           Children: [],
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -1885,6 +1884,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         },
         InnerHtml:
@@ -1899,7 +1899,6 @@
   
 </body>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -1922,6 +1921,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, HtmlMember,
         NodeName: BODY
       },
       InnerHtml:
@@ -1937,7 +1937,6 @@
   
 </body></html>,
       IsFocused: false,
-      Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
       HasChildNodes: true,
       BaseUri: about:blank,
       BaseUrl: {
@@ -1960,6 +1959,7 @@
         SearchParams: {}
       },
       NodeType: Element,
+      Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
       NodeName: HTML
     },
     Entities: {},
@@ -2077,7 +2077,6 @@
                     InnerHtml: My first paragraph.,
                     OuterHtml: <p>My first paragraph.</p>,
                     IsFocused: false,
-                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -2100,13 +2099,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     NodeName: P
                   },
                   Children: [],
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -2129,6 +2128,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 {
@@ -2169,7 +2169,6 @@
                     InnerHtml: My First Heading,
                     OuterHtml: <h1>My First Heading</h1>,
                     IsFocused: false,
-                    Flags: Special, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -2192,13 +2191,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, HtmlMember,
                     NodeName: H1
                   },
                   Children: [],
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -2221,6 +2220,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 }
               ],
@@ -2262,7 +2262,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -2285,13 +2284,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -2314,6 +2313,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               LastElementChild: {
@@ -2354,7 +2354,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -2377,13 +2376,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -2406,6 +2405,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               InnerHtml:
@@ -2420,7 +2420,6 @@
   
 </body>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -2443,13 +2442,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, HtmlMember,
               NodeName: BODY
             },
             Children: [],
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -2472,6 +2471,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           {
@@ -2516,7 +2516,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -2539,6 +2538,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: HEAD
             },
             ChildElementCount: 2,
@@ -2581,7 +2581,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -2604,13 +2603,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -2633,6 +2632,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -2673,7 +2673,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -2696,13 +2695,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -2725,6 +2724,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -2766,7 +2766,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -2789,13 +2788,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -2818,6 +2817,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -2858,7 +2858,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -2881,13 +2880,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -2910,6 +2909,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -2924,7 +2924,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -2947,6 +2946,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           }
         ],
@@ -3028,7 +3028,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -3051,13 +3050,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -3080,6 +3079,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -3120,7 +3120,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -3143,13 +3142,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -3172,6 +3171,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -3213,7 +3213,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -3236,13 +3235,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -3265,6 +3264,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -3305,7 +3305,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -3328,13 +3327,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -3357,6 +3356,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -3371,7 +3371,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -3394,13 +3393,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           Children: [],
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -3423,6 +3422,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         LastElementChild: {
@@ -3467,7 +3467,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -3490,6 +3489,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           ChildElementCount: 2,
@@ -3532,7 +3532,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -3555,13 +3554,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -3584,6 +3583,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -3624,7 +3624,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -3647,13 +3646,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -3676,6 +3675,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -3717,7 +3717,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -3740,13 +3739,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -3769,6 +3768,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -3809,7 +3809,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -3832,13 +3831,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -3861,6 +3860,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -3875,7 +3875,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -3898,6 +3897,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         InnerHtml:
@@ -3913,7 +3913,6 @@
   
 </body></html>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -3936,6 +3935,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         NodeName: HTML
       },
       {
@@ -4016,7 +4016,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -4039,13 +4038,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -4068,6 +4067,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -4108,7 +4108,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -4131,13 +4130,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -4160,6 +4159,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -4201,7 +4201,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -4224,13 +4223,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -4253,6 +4252,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -4293,7 +4293,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -4316,13 +4315,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -4345,6 +4344,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -4359,7 +4359,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -4382,6 +4381,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           ParentElement: {
             IsHidden: false,
             DropZone: [],
@@ -4418,7 +4418,6 @@
   
 </body></html>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -4441,6 +4440,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             NodeName: HTML
           },
           NodeName: BODY
@@ -4449,7 +4449,6 @@
         InnerHtml: ,
         OuterHtml: <head></head>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: false,
         BaseUri: about:blank,
         BaseUrl: {
@@ -4472,6 +4471,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         ParentElement: {
           IsHidden: false,
           DropZone: [],
@@ -4556,7 +4556,6 @@
                     InnerHtml: My first paragraph.,
                     OuterHtml: <p>My first paragraph.</p>,
                     IsFocused: false,
-                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -4579,13 +4578,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     NodeName: P
                   },
                   Children: [],
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -4608,6 +4607,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 {
@@ -4648,7 +4648,6 @@
                     InnerHtml: My First Heading,
                     OuterHtml: <h1>My First Heading</h1>,
                     IsFocused: false,
-                    Flags: Special, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -4671,13 +4670,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, HtmlMember,
                     NodeName: H1
                   },
                   Children: [],
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -4700,6 +4699,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 }
               ],
@@ -4741,7 +4741,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -4764,13 +4763,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -4793,6 +4792,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               LastElementChild: {
@@ -4833,7 +4833,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -4856,13 +4855,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -4885,6 +4884,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               InnerHtml:
@@ -4899,7 +4899,6 @@
   
 </body>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -4922,6 +4921,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, HtmlMember,
               NodeName: BODY
             }
           ],
@@ -4986,7 +4986,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -5009,13 +5008,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -5038,6 +5037,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -5078,7 +5078,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -5101,13 +5100,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -5130,6 +5129,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -5171,7 +5171,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -5194,13 +5193,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -5223,6 +5222,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -5263,7 +5263,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -5286,13 +5285,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -5315,6 +5314,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -5329,7 +5329,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -5352,6 +5351,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           InnerHtml:
@@ -5367,7 +5367,6 @@
   
 </body></html>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -5390,6 +5389,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           NodeName: HTML
         },
         NodeName: HEAD
@@ -5436,7 +5436,6 @@
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -5459,6 +5458,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           ParentElement: {
             IsHidden: false,
             DropZone: [],
@@ -5495,7 +5495,6 @@
   
 </body></html>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -5518,6 +5517,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             NodeName: HTML
           },
           NodeName: HEAD
@@ -5562,7 +5562,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -5585,13 +5584,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -5614,6 +5613,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           {
@@ -5654,7 +5654,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -5677,13 +5676,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -5706,6 +5705,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           }
         ],
@@ -5747,7 +5747,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -5770,13 +5769,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           Children: [],
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -5799,6 +5798,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         LastElementChild: {
@@ -5839,7 +5839,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -5862,13 +5861,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           Children: [],
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -5891,6 +5890,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         },
         InnerHtml:
@@ -5905,7 +5905,6 @@
   
 </body>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -5928,6 +5927,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, HtmlMember,
         ParentElement: {
           IsHidden: false,
           DropZone: [],
@@ -5972,7 +5972,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -5995,6 +5994,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: HEAD
             }
           ],
@@ -6019,7 +6019,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -6042,6 +6041,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           InnerHtml:
@@ -6057,7 +6057,6 @@
   
 </body></html>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -6080,6 +6079,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           NodeName: HTML
         },
         NodeName: BODY
@@ -6122,7 +6122,6 @@
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -6145,6 +6144,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           ParentElement: {
             IsHidden: false,
             DropZone: [],
@@ -6187,7 +6187,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -6210,6 +6209,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               ParentElement: {
                 IsHidden: false,
                 DropZone: [],
@@ -6246,7 +6246,6 @@
   
 </body></html>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -6269,6 +6268,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
                 NodeName: HTML
               },
               NodeName: HEAD
@@ -6287,7 +6287,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -6310,6 +6309,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             ParentElement: {
               IsHidden: false,
               DropZone: [],
@@ -6354,7 +6354,6 @@
                   InnerHtml: ,
                   OuterHtml: <head></head>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: false,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -6377,6 +6376,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: HEAD
                 }
               ],
@@ -6401,7 +6401,6 @@
                 InnerHtml: ,
                 OuterHtml: <head></head>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: false,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -6424,6 +6423,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: HEAD
               },
               InnerHtml:
@@ -6439,7 +6439,6 @@
   
 </body></html>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -6462,6 +6461,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               NodeName: HTML
             },
             NodeName: BODY
@@ -6472,7 +6472,6 @@
         InnerHtml: My First Heading,
         OuterHtml: <h1>My First Heading</h1>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -6495,6 +6494,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         ParentElement: {
           IsHidden: false,
           DropZone: [],
@@ -6537,7 +6537,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -6560,6 +6559,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             ParentElement: {
               IsHidden: false,
               DropZone: [],
@@ -6596,7 +6596,6 @@
   
 </body></html>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -6619,6 +6618,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               NodeName: HTML
             },
             NodeName: HEAD
@@ -6646,7 +6646,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -6669,6 +6668,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -6693,7 +6693,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -6716,6 +6715,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -6730,7 +6730,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -6753,6 +6752,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           ParentElement: {
             IsHidden: false,
             DropZone: [],
@@ -6797,7 +6797,6 @@
                 InnerHtml: ,
                 OuterHtml: <head></head>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: false,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -6820,6 +6819,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: HEAD
               }
             ],
@@ -6844,7 +6844,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -6867,6 +6866,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: HEAD
             },
             InnerHtml:
@@ -6882,7 +6882,6 @@
   
 </body></html>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -6905,6 +6904,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             NodeName: HTML
           },
           NodeName: BODY
@@ -6949,7 +6949,6 @@
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -6972,6 +6971,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           ParentElement: {
             IsHidden: false,
             DropZone: [],
@@ -7014,7 +7014,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -7037,6 +7036,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               ParentElement: {
                 IsHidden: false,
                 DropZone: [],
@@ -7073,7 +7073,6 @@
   
 </body></html>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -7096,6 +7095,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
                 NodeName: HTML
               },
               NodeName: HEAD
@@ -7114,7 +7114,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -7137,6 +7136,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             ParentElement: {
               IsHidden: false,
               DropZone: [],
@@ -7181,7 +7181,6 @@
                   InnerHtml: ,
                   OuterHtml: <head></head>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: false,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -7204,6 +7203,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: HEAD
                 }
               ],
@@ -7228,7 +7228,6 @@
                 InnerHtml: ,
                 OuterHtml: <head></head>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: false,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -7251,6 +7250,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: HEAD
               },
               InnerHtml:
@@ -7266,7 +7266,6 @@
   
 </body></html>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -7289,6 +7288,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               NodeName: HTML
             },
             NodeName: BODY
@@ -7299,7 +7299,6 @@
         InnerHtml: My first paragraph.,
         OuterHtml: <p>My first paragraph.</p>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -7322,6 +7321,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
         ParentElement: {
           IsHidden: false,
           DropZone: [],
@@ -7364,7 +7364,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -7387,6 +7386,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             ParentElement: {
               IsHidden: false,
               DropZone: [],
@@ -7423,7 +7423,6 @@
   
 </body></html>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -7446,6 +7445,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
               NodeName: HTML
             },
             NodeName: HEAD
@@ -7473,7 +7473,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -7496,6 +7495,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             }
           ],
@@ -7520,7 +7520,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -7543,6 +7542,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           InnerHtml:
@@ -7557,7 +7557,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -7580,6 +7579,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           ParentElement: {
             IsHidden: false,
             DropZone: [],
@@ -7624,7 +7624,6 @@
                 InnerHtml: ,
                 OuterHtml: <head></head>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: false,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -7647,6 +7646,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: HEAD
               }
             ],
@@ -7671,7 +7671,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -7694,6 +7693,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: HEAD
             },
             InnerHtml:
@@ -7709,7 +7709,6 @@
   
 </body></html>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -7732,6 +7731,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
             NodeName: HTML
           },
           NodeName: BODY
@@ -7843,7 +7843,6 @@
                     InnerHtml: My first paragraph.,
                     OuterHtml: <p>My first paragraph.</p>,
                     IsFocused: false,
-                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -7866,13 +7865,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     NodeName: P
                   },
                   Children: [],
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -7895,6 +7894,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 {
@@ -7935,7 +7935,6 @@
                     InnerHtml: My First Heading,
                     OuterHtml: <h1>My First Heading</h1>,
                     IsFocused: false,
-                    Flags: Special, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -7958,13 +7957,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, HtmlMember,
                     NodeName: H1
                   },
                   Children: [],
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -7987,6 +7986,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 }
               ],
@@ -8028,7 +8028,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -8051,13 +8050,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8080,6 +8079,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               LastElementChild: {
@@ -8120,7 +8120,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -8143,13 +8142,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8172,6 +8171,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               InnerHtml:
@@ -8186,7 +8186,6 @@
   
 </body>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -8209,13 +8208,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, HtmlMember,
               NodeName: BODY
             },
             Children: [],
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -8238,6 +8237,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           {
@@ -8282,7 +8282,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -8305,6 +8304,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: HEAD
             },
             ChildElementCount: 2,
@@ -8347,7 +8347,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -8370,13 +8369,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8399,6 +8398,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -8439,7 +8439,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -8462,13 +8461,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8491,6 +8490,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -8532,7 +8532,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8555,13 +8554,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -8584,6 +8583,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -8624,7 +8624,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8647,13 +8646,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -8676,6 +8675,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -8690,7 +8690,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -8713,6 +8712,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           }
         ],
@@ -8794,7 +8794,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -8817,13 +8816,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8846,6 +8845,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -8886,7 +8886,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -8909,13 +8908,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -8938,6 +8937,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -8979,7 +8979,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -9002,13 +9001,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -9031,6 +9030,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -9071,7 +9071,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -9094,13 +9093,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -9123,6 +9122,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -9137,7 +9137,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -9160,13 +9159,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           Children: [],
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -9189,6 +9188,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         LastElementChild: {
@@ -9233,7 +9233,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -9256,6 +9255,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           ChildElementCount: 2,
@@ -9298,7 +9298,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -9321,13 +9320,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -9350,6 +9349,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -9390,7 +9390,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -9413,13 +9412,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -9442,6 +9441,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -9483,7 +9483,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -9506,13 +9505,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -9535,6 +9534,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -9575,7 +9575,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -9598,13 +9597,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -9627,6 +9626,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -9641,7 +9641,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -9664,6 +9663,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         InnerHtml:
@@ -9679,7 +9679,6 @@
   
 </body></html>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -9702,6 +9701,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         NodeName: HTML
       }
     ],
@@ -9806,7 +9806,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -9829,13 +9828,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -9858,6 +9857,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -9898,7 +9898,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -9921,13 +9920,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -9950,6 +9949,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -9991,7 +9991,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -10014,13 +10013,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10043,6 +10042,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -10083,7 +10083,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -10106,13 +10105,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10135,6 +10134,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -10149,7 +10149,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -10172,13 +10171,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           Children: [],
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -10201,6 +10200,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         {
@@ -10245,7 +10245,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -10268,6 +10267,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           ChildElementCount: 2,
@@ -10310,7 +10310,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -10333,13 +10332,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10362,6 +10361,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -10402,7 +10402,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -10425,13 +10424,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10454,6 +10453,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -10495,7 +10495,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10518,13 +10517,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -10547,6 +10546,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -10587,7 +10587,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10610,13 +10609,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -10639,6 +10638,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -10653,7 +10653,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -10676,6 +10675,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         }
       ],
@@ -10757,7 +10757,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -10780,13 +10779,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10809,6 +10808,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -10849,7 +10849,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -10872,13 +10871,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10901,6 +10900,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -10942,7 +10942,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -10965,13 +10964,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -10994,6 +10993,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -11034,7 +11034,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -11057,13 +11056,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -11086,6 +11085,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -11100,7 +11100,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -11123,13 +11122,13 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         Children: [],
         InnerHtml: ,
         OuterHtml: <head></head>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: false,
         BaseUri: about:blank,
         BaseUrl: {
@@ -11152,6 +11151,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         NodeName: HEAD
       },
       LastElementChild: {
@@ -11196,7 +11196,6 @@
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -11219,6 +11218,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         ChildElementCount: 2,
@@ -11261,7 +11261,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -11284,13 +11283,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -11313,6 +11312,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           {
@@ -11353,7 +11353,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -11376,13 +11375,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -11405,6 +11404,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           }
         ],
@@ -11446,7 +11446,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -11469,13 +11468,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           Children: [],
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -11498,6 +11497,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         LastElementChild: {
@@ -11538,7 +11538,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -11561,13 +11560,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           Children: [],
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -11590,6 +11589,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         },
         InnerHtml:
@@ -11604,7 +11604,6 @@
   
 </body>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -11627,6 +11626,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, HtmlMember,
         NodeName: BODY
       },
       InnerHtml:
@@ -11642,7 +11642,6 @@
   
 </body></html>,
       IsFocused: false,
-      Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
       HasChildNodes: true,
       BaseUri: about:blank,
       BaseUrl: {
@@ -11665,6 +11664,7 @@
         SearchParams: {}
       },
       NodeType: Element,
+      Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
       NodeName: HTML
     },
     LastElementChild: {
@@ -11768,7 +11768,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -11791,13 +11790,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -11820,6 +11819,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -11860,7 +11860,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -11883,13 +11882,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -11912,6 +11911,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -11953,7 +11953,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -11976,13 +11975,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12005,6 +12004,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -12045,7 +12045,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -12068,13 +12067,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12097,6 +12096,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -12111,7 +12111,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -12134,13 +12133,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           Children: [],
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -12163,6 +12162,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         {
@@ -12207,7 +12207,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -12230,6 +12229,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           ChildElementCount: 2,
@@ -12272,7 +12272,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -12295,13 +12294,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12324,6 +12323,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -12364,7 +12364,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -12387,13 +12386,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12416,6 +12415,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -12457,7 +12457,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12480,13 +12479,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -12509,6 +12508,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -12549,7 +12549,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12572,13 +12571,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -12601,6 +12600,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -12615,7 +12615,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -12638,6 +12637,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         }
       ],
@@ -12719,7 +12719,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -12742,13 +12741,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12771,6 +12770,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -12811,7 +12811,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -12834,13 +12833,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12863,6 +12862,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -12904,7 +12904,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -12927,13 +12926,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -12956,6 +12955,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -12996,7 +12996,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -13019,13 +13018,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -13048,6 +13047,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -13062,7 +13062,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -13085,13 +13084,13 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         Children: [],
         InnerHtml: ,
         OuterHtml: <head></head>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: false,
         BaseUri: about:blank,
         BaseUrl: {
@@ -13114,6 +13113,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         NodeName: HEAD
       },
       LastElementChild: {
@@ -13158,7 +13158,6 @@
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -13181,6 +13180,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         ChildElementCount: 2,
@@ -13223,7 +13223,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -13246,13 +13245,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -13275,6 +13274,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           {
@@ -13315,7 +13315,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -13338,13 +13337,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -13367,6 +13366,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           }
         ],
@@ -13408,7 +13408,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -13431,13 +13430,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           Children: [],
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -13460,6 +13459,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         LastElementChild: {
@@ -13500,7 +13500,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -13523,13 +13522,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           Children: [],
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -13552,6 +13551,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         },
         InnerHtml:
@@ -13566,7 +13566,6 @@
   
 </body>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -13589,6 +13588,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, HtmlMember,
         NodeName: BODY
       },
       InnerHtml:
@@ -13604,7 +13604,6 @@
   
 </body></html>,
       IsFocused: false,
-      Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
       HasChildNodes: true,
       BaseUri: about:blank,
       BaseUrl: {
@@ -13627,6 +13626,7 @@
         SearchParams: {}
       },
       NodeType: Element,
+      Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
       NodeName: HTML
     },
     IsAsync: true,
@@ -13733,7 +13733,6 @@
                     InnerHtml: My first paragraph.,
                     OuterHtml: <p>My first paragraph.</p>,
                     IsFocused: false,
-                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -13756,13 +13755,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                     NodeName: P
                   },
                   Children: [],
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -13785,6 +13784,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 {
@@ -13825,7 +13825,6 @@
                     InnerHtml: My First Heading,
                     OuterHtml: <h1>My First Heading</h1>,
                     IsFocused: false,
-                    Flags: Special, HtmlMember,
                     HasChildNodes: true,
                     BaseUri: about:blank,
                     BaseUrl: {
@@ -13848,13 +13847,13 @@
                       SearchParams: {}
                     },
                     NodeType: Element,
+                    Flags: Special, HtmlMember,
                     NodeName: H1
                   },
                   Children: [],
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -13877,6 +13876,7 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 }
               ],
@@ -13918,7 +13918,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -13941,13 +13940,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -13970,6 +13969,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               LastElementChild: {
@@ -14010,7 +14010,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -14033,13 +14032,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14062,6 +14061,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               InnerHtml:
@@ -14076,7 +14076,6 @@
   
 </body>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -14099,13 +14098,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, HtmlMember,
               NodeName: BODY
             },
             Children: [],
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -14128,6 +14127,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           {
@@ -14172,7 +14172,6 @@
               InnerHtml: ,
               OuterHtml: <head></head>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: false,
               BaseUri: about:blank,
               BaseUrl: {
@@ -14195,6 +14194,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: HEAD
             },
             ChildElementCount: 2,
@@ -14237,7 +14237,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -14260,13 +14259,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14289,6 +14288,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -14329,7 +14329,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -14352,13 +14351,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14381,6 +14380,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -14422,7 +14422,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14445,13 +14444,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -14474,6 +14473,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -14514,7 +14514,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14537,13 +14536,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -14566,6 +14565,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -14580,7 +14580,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -14603,6 +14602,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           }
         ],
@@ -14684,7 +14684,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -14707,13 +14706,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14736,6 +14735,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -14776,7 +14776,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -14799,13 +14798,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14828,6 +14827,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -14869,7 +14869,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14892,13 +14891,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -14921,6 +14920,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -14961,7 +14961,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -14984,13 +14983,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15013,6 +15012,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -15027,7 +15027,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -15050,13 +15049,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           },
           Children: [],
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -15079,6 +15078,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         LastElementChild: {
@@ -15123,7 +15123,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -15146,6 +15145,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           },
           ChildElementCount: 2,
@@ -15188,7 +15188,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -15211,13 +15210,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15240,6 +15239,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -15280,7 +15280,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -15303,13 +15302,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15332,6 +15331,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -15373,7 +15373,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15396,13 +15395,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -15425,6 +15424,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -15465,7 +15465,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15488,13 +15487,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -15517,6 +15516,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -15531,7 +15531,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -15554,6 +15553,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         InnerHtml:
@@ -15569,7 +15569,6 @@
   
 </body></html>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -15592,6 +15591,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         NodeName: HTML
       },
       Name: html,
@@ -15801,7 +15801,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15824,13 +15823,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -15853,6 +15852,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           {
@@ -15893,7 +15893,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -15916,13 +15915,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -15945,6 +15944,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           }
         ],
@@ -15986,7 +15986,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -16009,13 +16008,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           Children: [],
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -16038,6 +16037,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         LastElementChild: {
@@ -16078,7 +16078,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -16101,13 +16100,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           Children: [],
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -16130,6 +16129,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         },
         InnerHtml:
@@ -16144,7 +16144,6 @@
   
 </body>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -16167,6 +16166,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, HtmlMember,
         ParentElement: {
           IsHidden: false,
           DropZone: [],
@@ -16203,7 +16203,6 @@
   
 </body></html>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -16226,6 +16225,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           NodeName: HTML
         },
         NodeName: BODY
@@ -16234,7 +16234,6 @@
       InnerHtml: ,
       OuterHtml: <head></head>,
       IsFocused: false,
-      Flags: Special, HtmlMember,
       HasChildNodes: false,
       BaseUri: about:blank,
       BaseUrl: {
@@ -16257,6 +16256,7 @@
         SearchParams: {}
       },
       NodeType: Element,
+      Flags: Special, HtmlMember,
       ParentElement: {
         IsHidden: false,
         DropZone: [],
@@ -16341,7 +16341,6 @@
                   InnerHtml: My first paragraph.,
                   OuterHtml: <p>My first paragraph.</p>,
                   IsFocused: false,
-                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -16364,13 +16363,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                   NodeName: P
                 },
                 Children: [],
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -16393,6 +16392,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               {
@@ -16433,7 +16433,6 @@
                   InnerHtml: My First Heading,
                   OuterHtml: <h1>My First Heading</h1>,
                   IsFocused: false,
-                  Flags: Special, HtmlMember,
                   HasChildNodes: true,
                   BaseUri: about:blank,
                   BaseUrl: {
@@ -16456,13 +16455,13 @@
                     SearchParams: {}
                   },
                   NodeType: Element,
+                  Flags: Special, HtmlMember,
                   NodeName: H1
                 },
                 Children: [],
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -16485,6 +16484,7 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               }
             ],
@@ -16526,7 +16526,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -16549,13 +16548,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -16578,6 +16577,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             LastElementChild: {
@@ -16618,7 +16618,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -16641,13 +16640,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -16670,6 +16669,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             InnerHtml:
@@ -16684,7 +16684,6 @@
   
 </body>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -16707,6 +16706,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, HtmlMember,
             NodeName: BODY
           }
         ],
@@ -16771,7 +16771,6 @@
                 InnerHtml: My first paragraph.,
                 OuterHtml: <p>My first paragraph.</p>,
                 IsFocused: false,
-                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -16794,13 +16793,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
                 NodeName: P
               },
               Children: [],
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -16823,6 +16822,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             {
@@ -16863,7 +16863,6 @@
                 InnerHtml: My First Heading,
                 OuterHtml: <h1>My First Heading</h1>,
                 IsFocused: false,
-                Flags: Special, HtmlMember,
                 HasChildNodes: true,
                 BaseUri: about:blank,
                 BaseUrl: {
@@ -16886,13 +16885,13 @@
                   SearchParams: {}
                 },
                 NodeType: Element,
+                Flags: Special, HtmlMember,
                 NodeName: H1
               },
               Children: [],
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -16915,6 +16914,7 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             }
           ],
@@ -16956,7 +16956,6 @@
               InnerHtml: My first paragraph.,
               OuterHtml: <p>My first paragraph.</p>,
               IsFocused: false,
-              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -16979,13 +16978,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
               NodeName: P
             },
             Children: [],
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -17008,6 +17007,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           LastElementChild: {
@@ -17048,7 +17048,6 @@
               InnerHtml: My First Heading,
               OuterHtml: <h1>My First Heading</h1>,
               IsFocused: false,
-              Flags: Special, HtmlMember,
               HasChildNodes: true,
               BaseUri: about:blank,
               BaseUrl: {
@@ -17071,13 +17070,13 @@
                 SearchParams: {}
               },
               NodeType: Element,
+              Flags: Special, HtmlMember,
               NodeName: H1
             },
             Children: [],
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -17100,6 +17099,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           InnerHtml:
@@ -17114,7 +17114,6 @@
   
 </body>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17137,6 +17136,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, HtmlMember,
           NodeName: BODY
         },
         InnerHtml:
@@ -17152,7 +17152,6 @@
   
 </body></html>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -17175,6 +17174,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         NodeName: HTML
       },
       NodeName: HEAD
@@ -17221,7 +17221,6 @@
         InnerHtml: ,
         OuterHtml: <head></head>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: false,
         BaseUri: about:blank,
         BaseUrl: {
@@ -17244,6 +17243,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         ParentElement: {
           IsHidden: false,
           DropZone: [],
@@ -17280,7 +17280,6 @@
   
 </body></html>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17303,6 +17302,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
           NodeName: HTML
         },
         NodeName: HEAD
@@ -17347,7 +17347,6 @@
             InnerHtml: My first paragraph.,
             OuterHtml: <p>My first paragraph.</p>,
             IsFocused: false,
-            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -17370,13 +17369,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
             NodeName: P
           },
           Children: [],
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17399,6 +17398,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         {
@@ -17439,7 +17439,6 @@
             InnerHtml: My First Heading,
             OuterHtml: <h1>My First Heading</h1>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: true,
             BaseUri: about:blank,
             BaseUrl: {
@@ -17462,13 +17461,13 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: H1
           },
           Children: [],
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17491,6 +17490,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         }
       ],
@@ -17532,7 +17532,6 @@
           InnerHtml: My first paragraph.,
           OuterHtml: <p>My first paragraph.</p>,
           IsFocused: false,
-          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17555,13 +17554,13 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
           NodeName: P
         },
         Children: [],
         InnerHtml: My First Heading,
         OuterHtml: <h1>My First Heading</h1>,
         IsFocused: false,
-        Flags: Special, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -17584,6 +17583,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, HtmlMember,
         NodeName: H1
       },
       LastElementChild: {
@@ -17624,7 +17624,6 @@
           InnerHtml: My First Heading,
           OuterHtml: <h1>My First Heading</h1>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: true,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17647,13 +17646,13 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: H1
         },
         Children: [],
         InnerHtml: My first paragraph.,
         OuterHtml: <p>My first paragraph.</p>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -17676,6 +17675,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, ImpliedEnd, HtmlMember,
         NodeName: P
       },
       InnerHtml:
@@ -17690,7 +17690,6 @@
   
 </body>,
       IsFocused: false,
-      Flags: Special, ImplicitlyClosed, HtmlMember,
       HasChildNodes: true,
       BaseUri: about:blank,
       BaseUrl: {
@@ -17713,6 +17712,7 @@
         SearchParams: {}
       },
       NodeType: Element,
+      Flags: Special, ImplicitlyClosed, HtmlMember,
       ParentElement: {
         IsHidden: false,
         DropZone: [],
@@ -17757,7 +17757,6 @@
             InnerHtml: ,
             OuterHtml: <head></head>,
             IsFocused: false,
-            Flags: Special, HtmlMember,
             HasChildNodes: false,
             BaseUri: about:blank,
             BaseUrl: {
@@ -17780,6 +17779,7 @@
               SearchParams: {}
             },
             NodeType: Element,
+            Flags: Special, HtmlMember,
             NodeName: HEAD
           }
         ],
@@ -17804,7 +17804,6 @@
           InnerHtml: ,
           OuterHtml: <head></head>,
           IsFocused: false,
-          Flags: Special, HtmlMember,
           HasChildNodes: false,
           BaseUri: about:blank,
           BaseUrl: {
@@ -17827,6 +17826,7 @@
             SearchParams: {}
           },
           NodeType: Element,
+          Flags: Special, HtmlMember,
           NodeName: HEAD
         },
         InnerHtml:
@@ -17842,7 +17842,6 @@
   
 </body></html>,
         IsFocused: false,
-        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         HasChildNodes: true,
         BaseUri: about:blank,
         BaseUrl: {
@@ -17865,6 +17864,7 @@
           SearchParams: {}
         },
         NodeType: Element,
+        Flags: Special, ImplicitlyClosed, Scoped, HtmlMember, HtmlTableSectionScoped, HtmlTableScoped,
         NodeName: HTML
       },
       NodeName: BODY
@@ -17894,6 +17894,11 @@
           Type: Func<IBrowsingContext, INavigationHandler>,
           Target: Configuration.<>c,
           Method: AngleSharp.Browser.INavigationHandler .ctor(AngleSharp.IBrowsingContext)
+        },
+        {
+          Type: Func<IBrowsingContext, IHtmlElementConstructionFactory>,
+          Target: Configuration.<>c,
+          Method: AngleSharp.Html.Construction.IHtmlElementConstructionFactory .ctor(AngleSharp.IBrowsingContext)
         }
       ]
     },
