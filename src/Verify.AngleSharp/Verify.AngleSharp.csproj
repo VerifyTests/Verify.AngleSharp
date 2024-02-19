@@ -6,7 +6,7 @@
     <PackageReference Include="AngleSharp" Version="1.1.0" />
     <PackageReference Include="AngleSharp.Css" Version="1.0.0-alpha-99" />
     <PackageReference Include="AngleSharp.Diffing" Version="0.18.2" />
-    <PackageReference Include="Polyfill" Version="2.3.0" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="2.4.0" PrivateAssets="all" />
     <PackageReference Include="ProjectDefaults" Version="1.0.110" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="23.2.0" />
   </ItemGroup>
