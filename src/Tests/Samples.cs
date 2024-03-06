@@ -202,7 +202,7 @@ public class Samples
         return Verify(html, "html", settings);
     }
 
-    void CustomOptionsGlobal()
+    static void CustomOptionsGlobal()
     {
         #region CustomOptionsGlobal
 
