@@ -71,7 +71,7 @@ public static class VerifyAngleSharpDiffing
         }
 
         var diffs = builder.Build().ToList();
-        if (diffs.Any())
+        if (diffs.Count != 0)
         {
             var stringBuilder = new StringBuilder(Environment.NewLine);
             foreach (var diff in diffs)
