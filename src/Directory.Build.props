@@ -8,5 +8,7 @@
     <PackageTags>AngleSharp, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) with Html verification utilities via AngleSharp (https://github.com/AngleSharp/AngleSharp).</Description>
     <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
   </PropertyGroup>
 </Project>
