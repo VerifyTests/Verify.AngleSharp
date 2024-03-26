@@ -27,13 +27,13 @@ Call `VerifyAngleSharpDiffing.Initialize()` once at assembly load time.
 Initialize takes an optional `Action<IDiffingStrategyCollection>` to control settings at a global level:
 
 <!-- snippet: Initialize -->
-<a id='snippet-initialize'></a>
+<a id='snippet-Initialize'></a>
 ```cs
 [ModuleInitializer]
 public static void Init() =>
     VerifyAngleSharpDiffing.Initialize();
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-initialize' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Initialize' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -58,7 +58,7 @@ Given an existing verified file:
 And a test:
 
 <!-- snippet: Sample -->
-<a id='snippet-sample'></a>
+<a id='snippet-Sample'></a>
 ```cs
 [Test]
 public Task Sample()
@@ -76,7 +76,7 @@ public Task Sample()
     return Verify(html, "html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L145-L163' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L145-L163' title='Snippet source file'>snippet source</a> | <a href='#snippet-Sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -102,7 +102,7 @@ Comparer result:
 Settings can also be controlled for a specific test.
 
 <!-- snippet: CustomOptions -->
-<a id='snippet-customoptions'></a>
+<a id='snippet-CustomOptions'></a>
 ```cs
 var settings = new VerifySettings();
 settings.AngleSharpDiffingSettings(
@@ -124,14 +124,14 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L168-L190' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L168-L190' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
 ### Global settings
 
 <!-- snippet: CustomOptionsGlobal -->
-<a id='snippet-customoptionsglobal'></a>
+<a id='snippet-CustomOptionsGlobal'></a>
 ```cs
 VerifyAngleSharpDiffing.Initialize(
     action =>
@@ -152,7 +152,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L207-L228' title='Snippet source file'>snippet source</a> | <a href='#snippet-customoptionsglobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L207-L228' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -161,7 +161,7 @@ VerifyAngleSharpDiffing.Initialize(
 Html can be pretty printed.
 
 <!-- snippet: PrettyPrintHtml -->
-<a id='snippet-prettyprinthtml'></a>
+<a id='snippet-PrettyPrintHtml'></a>
 ```cs
 [Test]
 public Task PrettyPrintHtml()
@@ -175,7 +175,7 @@ public Task PrettyPrintHtml()
         .PrettyPrintHtml();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L10-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L10-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -203,7 +203,7 @@ To apply this to all `html` files use `HtmlPrettyPrint.All();`
 Nodes can be manipulated as part of the pretty print:
 
 <!-- snippet: PrettyPrintHtmlWithNodeManipulation -->
-<a id='snippet-prettyprinthtmlwithnodemanipulation'></a>
+<a id='snippet-PrettyPrintHtmlWithNodeManipulation'></a>
 ```cs
 [Test]
 public Task PrettyPrintHtmlWithNodeManipulation()
@@ -228,7 +228,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L93-L118' title='Snippet source file'>snippet source</a> | <a href='#snippet-prettyprinthtmlwithnodemanipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L93-L118' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtmlWithNodeManipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -254,7 +254,7 @@ Results in
 ### ScrubEmptyDivs
 
 <!-- snippet: ScrubEmptyDivs -->
-<a id='snippet-scrubemptydivs'></a>
+<a id='snippet-ScrubEmptyDivs'></a>
 ```cs
 [Test]
 public Task ScrubEmptyDivs()
@@ -272,7 +272,7 @@ public Task ScrubEmptyDivs()
         .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L26-L44' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubemptydivs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L26-L44' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubEmptyDivs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -298,7 +298,7 @@ Results in:
 #### Removal
 
 <!-- snippet: ScrubAttributes -->
-<a id='snippet-scrubattributes'></a>
+<a id='snippet-ScrubAttributes'></a>
 ```cs
 [Test]
 public Task ScrubAttributes()
@@ -315,7 +315,7 @@ public Task ScrubAttributes()
         .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L46-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributes' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L46-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAttributes' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -338,7 +338,7 @@ Results in:
 #### Replace Value
 
 <!-- snippet: ScrubAttributeWithNewValue -->
-<a id='snippet-scrubattributewithnewvalue'></a>
+<a id='snippet-ScrubAttributeWithNewValue'></a>
 ```cs
 [Test]
 public Task ScrubAttributeWithNewValue()
@@ -364,7 +364,7 @@ public Task ScrubAttributeWithNewValue()
             }));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L65-L91' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrubattributewithnewvalue' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L65-L91' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAttributeWithNewValue' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
