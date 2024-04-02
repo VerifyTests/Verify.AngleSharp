@@ -1,6 +1,4 @@
-﻿// Global using directives
-
-global using System.Diagnostics.CodeAnalysis;
+﻿global using System.Diagnostics.CodeAnalysis;
 global using System.Text;
 global using AngleSharp.Diffing;
 global using AngleSharp.Diffing.Core;
