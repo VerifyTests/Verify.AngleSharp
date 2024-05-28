@@ -3,11 +3,11 @@
     <TargetFrameworks>net48;net6.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="1.1.2" />
-    <PackageReference Include="AngleSharp.Css" Version="1.0.0-beta.139" />
-    <PackageReference Include="AngleSharp.Diffing" Version="0.18.2" />
-    <PackageReference Include="Polyfill" Version="5.2.2" PrivateAssets="all" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.127" PrivateAssets="all" />
-    <PackageReference Include="Verify" Version="24.2.0" />
+    <PackageReference Include="AngleSharp" />
+    <PackageReference Include="AngleSharp.Css" />
+    <PackageReference Include="AngleSharp.Diffing" />
+    <PackageReference Include="Polyfill" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+    <PackageReference Include="Verify" />
   </ItemGroup>
 </Project>
