@@ -76,7 +76,7 @@ public Task Sample()
     return Verify(html, "html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L145-L163' title='Snippet source file'>snippet source</a> | <a href='#snippet-Sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L139-L157' title='Snippet source file'>snippet source</a> | <a href='#snippet-Sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -124,7 +124,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L168-L190' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L162-L184' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -152,7 +152,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L207-L228' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L201-L222' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -175,7 +175,7 @@ public Task PrettyPrintHtml()
         .PrettyPrintHtml();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L10-L24' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtml' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L4-L18' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtml' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -228,7 +228,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L93-L118' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtmlWithNodeManipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L87-L112' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtmlWithNodeManipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -272,7 +272,7 @@ public Task ScrubEmptyDivs()
         .PrettyPrintHtml(nodes => nodes.ScrubEmptyDivs());
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L26-L44' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubEmptyDivs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L20-L38' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubEmptyDivs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -315,7 +315,7 @@ public Task ScrubAttributes()
         .PrettyPrintHtml(nodes => nodes.ScrubAttributes("id"));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L46-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAttributes' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L40-L57' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAttributes' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -364,7 +364,7 @@ public Task ScrubAttributeWithNewValue()
             }));
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L65-L91' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAttributeWithNewValue' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L59-L85' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAttributeWithNewValue' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
