@@ -1,10 +1,4 @@
-﻿using AngleSharp.Diffing;
-using AngleSharp.Diffing.Core;
-using AngleSharp.Dom;
-using AngleSharp.Html.Parser;
-using VerifyTests.AngleSharp;
-
-[TestFixture]
+﻿[TestFixture]
 public class Samples
 {
     #region PrettyPrintHtml
