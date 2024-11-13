@@ -152,7 +152,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L201-L222' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L200-L220' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

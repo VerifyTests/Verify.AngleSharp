@@ -196,9 +196,8 @@ public class Samples
         return Verify(html, "html", settings);
     }
 
-    static void CustomOptionsGlobal()
-    {
-        #region CustomOptionsGlobal
+    static void CustomOptionsGlobal() =>
+    #region CustomOptionsGlobal
 
         VerifyAngleSharpDiffing.Initialize(
             action =>
@@ -218,7 +217,6 @@ public class Samples
                 var options = action.AddDefaultOptions();
                 options.AddFilter(SpanFilter);
             });
+    #endregion
 
-        #endregion
-    }
 }
