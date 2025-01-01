@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="AngleSharp" Version="1.1.2" />
+    <PackageVersion Include="AngleSharp" Version="1.2.0" />
     <PackageVersion Include="AngleSharp.Css" Version="1.0.0-beta.144" />
     <PackageVersion Include="AngleSharp.Diffing" Version="1.0.0" />
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="27.0.2" />
