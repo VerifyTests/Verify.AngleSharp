@@ -1,4 +1,4 @@
-﻿class CompareSettings(Action<IDiffingStrategyCollection> action)
+﻿class CompareSettings
 {
-    public Action<IDiffingStrategyCollection> Action { get; } = action;
+    public required Action<IDiffingStrategyCollection> Action { get; init; }
 }

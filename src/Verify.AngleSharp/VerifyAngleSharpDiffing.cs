@@ -5,7 +5,11 @@ public static class VerifyAngleSharpDiffing
     public static void AngleSharpDiffingSettings(
         this VerifySettings settings,
         Action<IDiffingStrategyCollection> options) =>
-        settings.Context["AngleSharpDiffing"] = new CompareSettings(options);
+        settings.Context["AngleSharpDiffing"] =
+            new CompareSettings
+            {
+                Action = options
+            };
 
     public static SettingsTask AngleSharpDiffingSettings(
         this SettingsTask settings,
@@ -41,6 +45,7 @@ public static class VerifyAngleSharpDiffing
         Initialized = true;
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
+
         Task<CompareResult> Func(string received, string verified, IReadOnlyDictionary<string, object> context)
         {
             var compare = Compare(received, verified, context, action);
