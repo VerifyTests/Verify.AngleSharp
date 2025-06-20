@@ -165,6 +165,7 @@ VerifyAngleSharpDiffing.Initialize(
 <sup><a href='/src/Tests/Samples.cs#L225-L245' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+
 ### Verify svg
 
 Given an existing verified file:
@@ -217,6 +218,7 @@ public Task SvgSample()
 <!-- endSnippet -->
 
 Note that the input svg differs from the verified svg, but not in a semantically significant way. Hence this test will pass.
+
 
 ## Pretty Print
 
