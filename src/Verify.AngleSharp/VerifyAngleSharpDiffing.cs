@@ -54,6 +54,7 @@ public static class VerifyAngleSharpDiffing
 
         VerifierSettings.RegisterStringComparer("html", Func);
         VerifierSettings.RegisterStringComparer("htm", Func);
+        VerifierSettings.RegisterStringComparer("svg", Func);
     }
 
     static CompareResult Compare(
