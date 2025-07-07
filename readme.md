@@ -85,7 +85,7 @@ public Task Sample()
     return Verify(html, "html");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L139-L157' title='Snippet source file'>snippet source</a> | <a href='#snippet-Sample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L196-L214' title='Snippet source file'>snippet source</a> | <a href='#snippet-Sample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input html differs from the verified html, but not in a semantically significant way. Hence this test will pass.
@@ -133,7 +133,7 @@ settings.AngleSharpDiffingSettings(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L187-L209' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptions' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L244-L266' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptions' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -161,7 +161,7 @@ VerifyAngleSharpDiffing.Initialize(
         options.AddFilter(SpanFilter);
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L225-L245' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L282-L302' title='Snippet source file'>snippet source</a> | <a href='#snippet-CustomOptionsGlobal' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -213,7 +213,7 @@ public Task SvgSample()
     return Verify(svg, "svg");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L159-L182' title='Snippet source file'>snippet source</a> | <a href='#snippet-SvgSample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L216-L239' title='Snippet source file'>snippet source</a> | <a href='#snippet-SvgSample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the input svg differs from the verified svg, but not in a semantically significant way. Hence this test will pass.
@@ -291,7 +291,7 @@ public Task PrettyPrintHtmlWithNodeManipulation()
             });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L87-L112' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtmlWithNodeManipulation' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L144-L169' title='Snippet source file'>snippet source</a> | <a href='#snippet-PrettyPrintHtmlWithNodeManipulation' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in 
@@ -444,4 +444,104 @@ Results in:
 </html>
 ```
 <sup><a href='/src/Tests/Samples.ScrubAttributeWithNewValue.verified.html#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubAttributeWithNewValue.verified.html' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+### ScrubAspCacheBusterTagHelper
+
+<!-- snippet: ScrubAspCacheBusterTagHelper -->
+<a id='snippet-ScrubAspCacheBusterTagHelper'></a>
+```cs
+[Test]
+public Task ScrubAspCacheBusterTagHelper()
+{
+    var html = """
+               <!DOCTYPE html>
+               <html>
+                 <head>
+                   <link
+                    href="/css/site.css?v=r2K1aJs2_7mdAedOAb0OQw3K46ElgPZWqeuI"
+                    rel="stylesheet"
+                    />
+                 </head>
+                 <body>
+                   <h1>My Heading</h1>
+                 </body>
+               </html>
+               """;
+    return Verify(html, "html")
+        .PrettyPrintHtml(nodes => nodes.ScrubAspCacheBusterTagHelper());
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L87-L110' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubAspCacheBusterTagHelper' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in:
+
+<!-- snippet: Samples.ScrubAspCacheBusterTagHelper.verified.html -->
+<a id='snippet-Samples.ScrubAspCacheBusterTagHelper.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/css/site.css?v={TAG_HELPER_VERSION}" rel="stylesheet">
+  </head>
+  <body>
+    <h1>My Heading</h1>
+  </body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.ScrubAspCacheBusterTagHelper.verified.html#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubAspCacheBusterTagHelper.verified.html' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+### ScrubBrowserLink
+
+<!-- snippet: ScrubBrowserLink -->
+<a id='snippet-ScrubBrowserLink'></a>
+```cs
+[Test]
+public Task ScrubBrowserLink()
+{
+    var html = """
+               <!DOCTYPE html>
+               <html>
+                 <head>
+                   <meta charset="utf-8">
+                 </head>
+                 <body>
+                   <h1>My Heading</h1>
+
+                   <!-- Visual Studio Browser Link -->
+                   <script src="/_vs/browserLink">
+                   </script>
+
+                   <script src="/_framework/aspnetcore-browser-refresh.js">
+                   </script>
+                   <!-- End Browser Link -->
+
+                   </body>
+               </html>
+               """;
+    return Verify(html, "html")
+        .PrettyPrintHtml(nodes => nodes.ScrubBrowserLink());
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L112-L142' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubBrowserLink' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+Results in:
+
+<!-- snippet: Samples.ScrubBrowserLink.verified.html -->
+<a id='snippet-Samples.ScrubBrowserLink.verified.html'></a>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>My Heading</h1>
+  </body>
+</html>
+```
+<sup><a href='/src/Tests/Samples.ScrubBrowserLink.verified.html#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.ScrubBrowserLink.verified.html' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
