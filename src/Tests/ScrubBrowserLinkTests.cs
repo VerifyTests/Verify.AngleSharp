@@ -56,6 +56,9 @@ public class ScrubBrowserLinkTests
                        <meta charset="utf-8">
                        <script src="/_vs/browserLink"></script>
                        <script src="/js/site.js"></script>
+                       <script type="text/javascript">
+                        "use strict";
+                       </script>
                        <!-- Some other comment -->
                      </head>
                      <body>
