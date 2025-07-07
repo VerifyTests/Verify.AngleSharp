@@ -1,7 +1,11 @@
 ﻿global using System.Diagnostics.CodeAnalysis;
 global using System.Text;
+global using System.Text.RegularExpressions;
 global using AngleSharp.Diffing;
 global using AngleSharp.Diffing.Core;
 global using AngleSharp.Diffing.Extensions;
 global using AngleSharp.Diffing.Strategies;
 global using AngleSharp.Dom;
+global using AngleSharp.Html;
+global using AngleSharp.Html.Dom;
+global using AngleSharp.Html.Parser;

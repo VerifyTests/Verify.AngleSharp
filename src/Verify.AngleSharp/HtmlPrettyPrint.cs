@@ -1,12 +1,9 @@
-﻿using System.Text.RegularExpressions;
-using AngleSharp.Html;
-using AngleSharp.Html.Dom;
-using AngleSharp.Html.Parser;
-
-namespace VerifyTests.AngleSharp;
+﻿namespace VerifyTests.AngleSharp;
 
 public static class HtmlPrettyPrint
 {
+    const StringComparison comparer = StringComparison.OrdinalIgnoreCase;
+
     public static void All(Action<INodeList>? action = null)
     {
         VerifierSettings.AddScrubber("html", builder => CleanSource(builder, action));
@@ -128,11 +125,10 @@ public static class HtmlPrettyPrint
     public static void ScrubAspCacheBusterTagHelper(this IEnumerable<IElement> elements) =>
         elements.ScrubAttributes(static attr =>
         {
-            var comparer = StringComparison.OrdinalIgnoreCase;
             if (attr.Name.Equals("href", comparer) || attr.Name.Equals("src", comparer))
             {
-                var pattern = @"([^""?]+[?&]v=)[\w\-]+";
-                var replacement = @"$1{TAG_HELPER_VERSION}";
+                const string pattern = @"([^""?]+[?&]v=)[\w\-]+";
+                const string replacement = "$1{TAG_HELPER_VERSION}";
 
                 return Regex.Replace(attr.Value, pattern, replacement);
             }
@@ -148,7 +144,6 @@ public static class HtmlPrettyPrint
     /// </param>
     public static void ScrubBrowserLink(this INodeList nodes)
     {
-        var comparer = StringComparison.OrdinalIgnoreCase;
         List<INode> nodesToRemove = [];
 
         foreach (var comment in nodes.DescendantsAndSelf<IComment>())
@@ -206,7 +201,7 @@ public static class HtmlPrettyPrint
 
     static bool IsWhitespaceOnly(string text) => string.IsNullOrEmpty(text) || text.All(char.IsWhiteSpace);
 
-    static StringBuilder CleanSource(StringBuilder builder, Action<INodeList>? action)
+    static void CleanSource(StringBuilder builder, Action<INodeList>? action)
     {
         var source = builder.ToString();
         var document = Parse(source);
@@ -221,7 +216,6 @@ public static class HtmlPrettyPrint
         using var writer = new StringWriter(builder);
         document.ToHtml(writer, formatter);
         writer.Flush();
-        return builder;
     }
 
     static INodeList Parse(string source)
