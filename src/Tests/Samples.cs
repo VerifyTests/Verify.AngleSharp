@@ -1,4 +1,4 @@
-﻿[TestFixture]
+[TestFixture]
 public class Samples
 {
     #region PrettyPrintHtml
@@ -80,6 +80,63 @@ public class Samples
 
                     return null;
                 }));
+    }
+
+    #endregion
+
+    #region ScrubAspCacheBusterTagHelper
+
+    [Test]
+    public Task ScrubAspCacheBusterTagHelper()
+    {
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <head>
+                       <link
+                        href="/css/site.css?v=r2K1aJs2_7mdAedOAb0OQw3K46ElgPZWqeuI"
+                        rel="stylesheet"
+                        />
+                     </head>
+                     <body>
+                       <h1>My Heading</h1>
+                     </body>
+                   </html>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml(nodes => nodes.ScrubAspCacheBusterTagHelper());
+    }
+
+    #endregion
+
+    #region ScrubBrowserLink
+
+    [Test]
+    public Task ScrubBrowserLink()
+    {
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <head>
+                       <meta charset="utf-8">
+                     </head>
+                     <body>
+                       <h1>My Heading</h1>
+
+
+                       <!-- Visual Studio Browser Link -->
+                       <script src="/_vs/browserLink">
+                       </script>
+
+                       <script src="/_framework/aspnetcore-browser-refresh.js">
+                       </script>
+                       <!-- End Browser Link -->
+
+                       </body>
+                   </html>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml(nodes => nodes.ScrubBrowserLink());
     }
 
     #endregion
