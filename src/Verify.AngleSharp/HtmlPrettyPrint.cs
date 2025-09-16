@@ -178,15 +178,15 @@ public static class HtmlPrettyPrint
 
     static IEnumerable<INode> CollectAdjacentWhitespace(INode node)
     {
-        return Collect(node, n => n.PreviousSibling)
-            .Union(Collect(node, n => n.NextSibling));
+        return Collect(node, _ => _.PreviousSibling)
+            .Union(Collect(node, _ => _.NextSibling));
 
         static IEnumerable<INode> Collect(INode n, Func<INode, INode?> iterator)
         {
             var current = iterator(n);
             while (current is not null)
             {
-                if (current is IText text && IsWhitespaceOnly(text.TextContent))
+                if (current is IText text && string.IsNullOrWhiteSpace(text.TextContent))
                 {
                     yield return current;
                     current = iterator(current);
@@ -198,8 +198,6 @@ public static class HtmlPrettyPrint
             }
         }
     }
-
-    static bool IsWhitespaceOnly(string text) => string.IsNullOrEmpty(text) || text.All(char.IsWhiteSpace);
 
     static void CleanSource(StringBuilder builder, Action<INodeList>? action)
     {
