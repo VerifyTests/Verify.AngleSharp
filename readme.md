@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> Verify.AngleSharp
 
 [![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
-[![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/Verify-AngleSharp)](https://ci.appveyor.com/project/SimonCropp/Verify-AngleSharp)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.AngleSharp.svg)](https://www.nuget.org/packages/Verify.AngleSharp/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) with Html verification utilities via [AngleSharp](https://github.com/AngleSharp/AngleSharp).<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
