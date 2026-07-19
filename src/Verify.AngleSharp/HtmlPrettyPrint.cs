@@ -287,7 +287,6 @@ public static class HtmlPrettyPrint
         };
         using var writer = new StringWriter(builder);
         document.ToHtml(writer, formatter);
-        writer.Flush();
     }
 
     static INodeList Parse(string source)
