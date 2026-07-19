@@ -15,18 +15,25 @@ public class FragmentContextBenchmarks
         <div class="card"><span>content</span></div>
         """;
 
-    [Benchmark(Baseline = true, Description = "Throwaway context document only")]
-    public IDocument ContextDocumentOnly() =>
+    [Benchmark(Baseline = true, Description = "Legacy context document only")]
+    public IDocument LegacyContextDocumentOnly() =>
         parser.ParseDocument("<html><body></body></html>");
 
-    [Benchmark(Description = "Empty context document only")]
-    public IDocument EmptyContextDocumentOnly() =>
+    [Benchmark(Description = "Current context document only")]
+    public IDocument CurrentContextDocumentOnly() =>
         parser.ParseDocument(string.Empty);
 
-    [Benchmark(Description = "Full fragment parse, as Parse does it")]
-    public INodeList ContextDocumentAndFragment()
+    [Benchmark(Description = "Legacy context document + fragment")]
+    public INodeList LegacyContextDocumentAndFragment()
     {
         var document = parser.ParseDocument("<html><body></body></html>");
+        return parser.ParseFragment(fragment, document.Body!);
+    }
+
+    [Benchmark(Description = "Current context document + fragment")]
+    public INodeList CurrentContextDocumentAndFragment()
+    {
+        var document = parser.ParseDocument(string.Empty);
         return parser.ParseFragment(fragment, document.Body!);
     }
 }

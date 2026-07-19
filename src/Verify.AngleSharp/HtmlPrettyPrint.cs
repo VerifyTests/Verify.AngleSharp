@@ -297,7 +297,9 @@ public static class HtmlPrettyPrint
             return parser.ParseDocument(source).ChildNodes;
         }
 
-        var dom = parser.ParseDocument("<html><body></body></html>");
+        // an empty document still yields html, head, and body, so it serves as a
+        // fragment context for less work than parsing the markup for them
+        var dom = parser.ParseDocument(string.Empty);
         return parser.ParseFragment(source, dom.Body!);
     }
 
