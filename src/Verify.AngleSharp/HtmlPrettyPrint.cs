@@ -282,8 +282,8 @@ public static class HtmlPrettyPrint
     static INodeList Parse(string source)
     {
         var parser = new HtmlParser();
-        if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
-            source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
+        if (source.StartsWith("<!DOCTYPE html>", comparer) ||
+            source.StartsWith("<html>", comparer))
         {
             return parser.ParseDocument(source).ChildNodes;
         }
