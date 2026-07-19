@@ -129,7 +129,8 @@ public static class HtmlPrettyPrint
             foreach (var attribute in element.Attributes)
             {
                 var value = tryGetValue(attribute);
-                if (value != null)
+                if (value != null &&
+                    !string.Equals(value, attribute.Value, StringComparison.Ordinal))
                 {
                     attribute.Value = value;
                 }
@@ -196,7 +197,7 @@ public static class HtmlPrettyPrint
                 return Regex.Replace(attr.Value, pattern, replacement);
             }
 
-            return attr.Value;
+            return null;
         });
 
     /// <summary>
