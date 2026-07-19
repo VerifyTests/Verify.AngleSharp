@@ -39,13 +39,46 @@ public static class HtmlPrettyPrint
         {
             element.RemoveFromParent();
         }
-        else if (element.Children.Length == 1)
+        else if (TryGetOnlyElement(element, out var child))
         {
-            var child = element.FirstChild;
-            element.Parent!.AppendChild(child);
+            element.Parent!.InsertBefore(child, element);
+            element.RemoveFromParent();
         }
 
         return true;
+    }
+
+    /// <summary>
+    /// Gets the single child element of <paramref name="element" />, but only when every
+    /// other child node is whitespace. Returns false when there is no element, more than
+    /// one element, or any text that unwrapping would discard.
+    /// </summary>
+    static bool TryGetOnlyElement(IElement element, [NotNullWhen(true)] out IElement? child)
+    {
+        child = null;
+        foreach (var node in element.ChildNodes)
+        {
+            if (node is IElement candidate)
+            {
+                if (child != null)
+                {
+                    child = null;
+                    return false;
+                }
+
+                child = candidate;
+                continue;
+            }
+
+            if (node is not IText text ||
+                !string.IsNullOrWhiteSpace(text.Data))
+            {
+                child = null;
+                return false;
+            }
+        }
+
+        return child != null;
     }
 
     public static void ScrubAttributes(this INodeList nodes, string name) =>
