@@ -4,6 +4,10 @@ public static class HtmlPrettyPrint
 {
     const StringComparison comparer = StringComparison.OrdinalIgnoreCase;
 
+    const string cacheBusterReplacement = "$1{TAG_HELPER_VERSION}";
+
+    static readonly Regex cacheBusterPattern = new(@"([^""?]+[?&]v=)[\w\-]+");
+
     public static void All(Action<INodeList>? action = null)
     {
         VerifierSettings.AddScrubber("html", builder => CleanSource(builder, action));
@@ -189,15 +193,21 @@ public static class HtmlPrettyPrint
     public static void ScrubAspCacheBusterTagHelper(this IEnumerable<IElement> elements) =>
         elements.ScrubAttributes(static attr =>
         {
-            if (attr.Name.Equals("href", comparer) || attr.Name.Equals("src", comparer))
+            if (!attr.Name.Equals("href", comparer) &&
+                !attr.Name.Equals("src", comparer))
             {
-                const string pattern = @"([^""?]+[?&]v=)[\w\-]+";
-                const string replacement = "$1{TAG_HELPER_VERSION}";
-
-                return Regex.Replace(attr.Value, pattern, replacement);
+                return null;
             }
 
-            return null;
+            var value = attr.Value;
+
+            // the pattern cannot match without a literal v=
+            if (value.IndexOf("v=", StringComparison.Ordinal) == -1)
+            {
+                return null;
+            }
+
+            return cacheBusterPattern.Replace(value, cacheBusterReplacement);
         });
 
     /// <summary>

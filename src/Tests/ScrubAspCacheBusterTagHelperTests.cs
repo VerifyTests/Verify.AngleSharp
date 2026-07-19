@@ -109,6 +109,21 @@ public class ScrubAspCacheBusterTagHelperTests
     }
 
     [Test]
+    public Task DoesNotScrubVOutsideQueryString()
+    {
+        var html = """
+                   <!DOCTYPE html>
+                   <html>
+                     <body>
+                       <a href="/path/v=notaquerystring">Link</a>
+                     </body>
+                   </html>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml(nodes => nodes.ScrubAspCacheBusterTagHelper());
+    }
+
+    [Test]
     public Task DoesNotAffectOtherAttributes()
     {
         var html = """
