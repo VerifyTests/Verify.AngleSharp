@@ -39,9 +39,10 @@ public static class HtmlPrettyPrint
         {
             element.RemoveFromParent();
         }
-        else if (TryGetOnlyElement(element, out var child))
+        else if (element.Parent is { } parent &&
+                 TryGetOnlyElement(element, out var child))
         {
-            element.Parent!.InsertBefore(child, element);
+            parent.InsertBefore(child, element);
             element.RemoveFromParent();
         }
 

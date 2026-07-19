@@ -67,6 +67,17 @@ public class ScrubEmptyDivsTests
     }
 
     [Test]
+    public void DoesNotThrowForDivWithoutParent()
+    {
+        var parser = new HtmlParser();
+        var document = parser.ParseDocument("<html><body><div><p>content</p></div></body></html>");
+        var div = document.QuerySelector("div")!;
+        div.Remove();
+
+        Assert.DoesNotThrow(() => div.TryScrubDiv());
+    }
+
+    [Test]
     public void KeepsDivWithAttributes()
     {
         var result = Scrub("<div id='keep'><p>content</p></div>");
