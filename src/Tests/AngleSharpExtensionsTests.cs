@@ -28,4 +28,24 @@ public class AngleSharpExtensionsTests
         Assert.That(result, Has.Count.EqualTo(2));
         Assert.That(result.Distinct().Count(), Is.EqualTo(2));
     }
+
+    [Test]
+    public void DescendantsExcludesTopLevelNodes()
+    {
+        var nodes = Parse("<a><b></b></a>");
+
+        var result = nodes.Descendants().ToList();
+
+        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(new[] { "B" }));
+    }
+
+    [Test]
+    public void DescendantsOfTypeExcludesTopLevelNodes()
+    {
+        var nodes = Parse("<p>one</p><p>two</p>");
+
+        var result = nodes.Descendants<IElement>().ToList();
+
+        Assert.That(result, Is.Empty);
+    }
 }

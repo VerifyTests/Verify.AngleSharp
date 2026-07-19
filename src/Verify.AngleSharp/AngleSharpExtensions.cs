@@ -40,9 +40,9 @@ public static class AngleSharpExtensions
     {
         foreach (var node in nodes.ToList())
         {
-            foreach (var element in node.DescendantsAndSelf())
+            foreach (var descendant in node.Descendants())
             {
-                yield return element;
+                yield return descendant;
             }
         }
     }
