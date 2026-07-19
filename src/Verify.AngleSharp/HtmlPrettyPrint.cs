@@ -15,7 +15,8 @@ public static class HtmlPrettyPrint
 
     public static void ScrubEmptyDivs(this IEnumerable<IElement> elements)
     {
-        foreach (var element in elements.DescendantsAndSelf<IElement>())
+        // materialized since scrubbing removes nodes from the tree being walked
+        foreach (var element in elements.DescendantsAndSelf<IElement>().ToList())
         {
             TryScrubDiv(element);
         }
