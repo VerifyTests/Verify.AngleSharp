@@ -22,6 +22,11 @@ public static class HtmlPrettyPrint
         }
     }
 
+    /// <summary>
+    /// Removes <paramref name="element" /> when it is a div with no attributes and no
+    /// content, or unwraps it when it wraps a single element.
+    /// </summary>
+    /// <returns>True when the div was removed or unwrapped.</returns>
     public static bool TryScrubDiv(this IElement element)
     {
         if (element is not IHtmlDivElement div)
@@ -38,15 +43,18 @@ public static class HtmlPrettyPrint
         if (!element.HasChildNodes)
         {
             element.RemoveFromParent();
+            return true;
         }
-        else if (element.Parent is { } parent &&
-                 TryGetOnlyElement(element, out var child))
+
+        if (element.Parent is { } parent &&
+            TryGetOnlyElement(element, out var child))
         {
             parent.InsertBefore(child, element);
             element.RemoveFromParent();
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     /// <summary>

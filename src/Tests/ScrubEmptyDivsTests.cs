@@ -74,6 +74,33 @@ public class ScrubEmptyDivsTests
         Assert.That(result, Is.EqualTo("<div>My First Heading</div>"));
     }
 
+    static IElement FirstElement(string html)
+    {
+        var parser = new HtmlParser();
+        var document = parser.ParseDocument($"<html><body>{html}</body></html>");
+        return document.Body!.Children[0];
+    }
+
+    [Test]
+    public void ReturnsTrueWhenDivRemoved() =>
+        Assert.That(FirstElement("<div></div>").TryScrubDiv(), Is.True);
+
+    [Test]
+    public void ReturnsTrueWhenDivUnwrapped() =>
+        Assert.That(FirstElement("<div><p>x</p></div>").TryScrubDiv(), Is.True);
+
+    [Test]
+    public void ReturnsFalseForNonDiv() =>
+        Assert.That(FirstElement("<p>x</p>").TryScrubDiv(), Is.False);
+
+    [Test]
+    public void ReturnsFalseWhenDivHasAttributes() =>
+        Assert.That(FirstElement("<div id='a'><p>x</p></div>").TryScrubDiv(), Is.False);
+
+    [Test]
+    public void ReturnsFalseWhenNothingToScrub() =>
+        Assert.That(FirstElement("<div><p>a</p><p>b</p></div>").TryScrubDiv(), Is.False);
+
     [Test]
     public void DoesNotThrowForDivWithoutParent()
     {
