@@ -29,7 +29,7 @@ public static class HtmlPrettyPrint
             return false;
         }
 
-        div.InnerHtml = div.InnerHtml.TrimEnd();
+        TrimTrailingWhitespace(div);
         if (element.HasAttributes())
         {
             return false;
@@ -47,6 +47,26 @@ public static class HtmlPrettyPrint
         }
 
         return true;
+    }
+
+    /// <summary>
+    /// Equivalent to trimming the end of InnerHtml, but without serializing and re-parsing
+    /// the subtree. The round trip replaced every descendant node, which both invalidated
+    /// nodes already collected for scrubbing and cost a full parse per div.
+    /// </summary>
+    static void TrimTrailingWhitespace(IElement element)
+    {
+        while (element.LastChild is IText text)
+        {
+            var trimmed = text.Data.TrimEnd();
+            if (trimmed.Length != 0)
+            {
+                text.Data = trimmed;
+                return;
+            }
+
+            element.RemoveChild(text);
+        }
     }
 
     /// <summary>

@@ -27,6 +27,14 @@ public class ScrubEmptyDivsTests
     }
 
     [Test]
+    public void UnwrapsNestedDivs()
+    {
+        var result = Scrub("<div><div><p>deep</p></div></div><footer>foot</footer>");
+
+        Assert.That(result, Is.EqualTo("<p>deep</p><footer>foot</footer>"));
+    }
+
+    [Test]
     public void DoesNotUnwrapWhenTextWouldBeLost()
     {
         var result = Scrub("<div>hello <span>world</span></div>");
