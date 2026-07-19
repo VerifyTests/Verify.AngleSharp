@@ -282,13 +282,46 @@ public static class HtmlPrettyPrint
     static INodeList Parse(string source)
     {
         var parser = new HtmlParser();
-        if (source.StartsWith("<!DOCTYPE html>", comparer) ||
-            source.StartsWith("<html>", comparer))
+        if (IsDocument(source))
         {
             return parser.ParseDocument(source).ChildNodes;
         }
 
         var dom = parser.ParseDocument("<html><body></body></html>");
         return parser.ParseFragment(source, dom.Body!);
+    }
+
+    /// <summary>
+    /// Detects a full document so it is parsed as one. Parsing a document as a body
+    /// fragment silently discards the html, head, and body elements.
+    /// </summary>
+    static bool IsDocument(string source)
+    {
+        var index = 0;
+        while (index < source.Length &&
+               char.IsWhiteSpace(source[index]))
+        {
+            index++;
+        }
+
+        if (Matches("<!doctype"))
+        {
+            return true;
+        }
+
+        if (!Matches("<html"))
+        {
+            return false;
+        }
+
+        // guard against matching elements like <htmlfoo>
+        var next = index + "<html".Length;
+        return next >= source.Length ||
+               source[next] is '>' or '/' ||
+               char.IsWhiteSpace(source[next]);
+
+        bool Matches(string tag) =>
+            index + tag.Length <= source.Length &&
+            string.Compare(source, index, tag, 0, tag.Length, comparer) == 0;
     }
 }
