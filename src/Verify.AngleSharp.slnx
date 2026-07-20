@@ -11,6 +11,7 @@
     <File Path="../global.json" />
     <File Path="mdsnippets.json" />
   </Folder>
+  <Project Path="Benchmarks/Benchmarks.csproj" />
   <Project Path="Tests/Tests.csproj" />
   <Project Path="Verify.AngleSharp/Verify.AngleSharp.csproj" />
 </Solution>

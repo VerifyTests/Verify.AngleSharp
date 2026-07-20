@@ -33,16 +33,16 @@ public static class VerifyAngleSharpDiffing
         return false;
     }
 
-    public static bool Initialized { get; private set; }
+    static int initialized;
+
+    public static bool Initialized => initialized == 1;
 
     public static void Initialize(Action<IDiffingStrategyCollection>? action = null)
     {
-        if (Initialized)
+        if (Interlocked.Exchange(ref initialized, 1) == 1)
         {
             throw new("Already Initialized");
         }
-
-        Initialized = true;
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
 

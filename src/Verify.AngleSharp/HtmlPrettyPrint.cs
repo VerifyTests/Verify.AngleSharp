@@ -4,6 +4,10 @@ public static class HtmlPrettyPrint
 {
     const StringComparison comparer = StringComparison.OrdinalIgnoreCase;
 
+    const string cacheBusterReplacement = "$1{TAG_HELPER_VERSION}";
+
+    static readonly Regex cacheBusterPattern = new(@"([^""?]+[?&]v=)[\w\-]+");
+
     public static void All(Action<INodeList>? action = null)
     {
         VerifierSettings.AddScrubber("html", builder => CleanSource(builder, action));
@@ -15,12 +19,18 @@ public static class HtmlPrettyPrint
 
     public static void ScrubEmptyDivs(this IEnumerable<IElement> elements)
     {
-        foreach (var element in elements.DescendantsAndSelf<IElement>())
+        // materialized since scrubbing removes nodes from the tree being walked
+        foreach (var element in elements.DescendantsAndSelf<IElement>().ToList())
         {
             TryScrubDiv(element);
         }
     }
 
+    /// <summary>
+    /// Removes <paramref name="element" /> when it is a div with no attributes and no
+    /// content, or unwraps it when it wraps a single element.
+    /// </summary>
+    /// <returns>True when the div was removed or unwrapped.</returns>
     public static bool TryScrubDiv(this IElement element)
     {
         if (element is not IHtmlDivElement div)
@@ -28,7 +38,7 @@ public static class HtmlPrettyPrint
             return false;
         }
 
-        div.InnerHtml = div.InnerHtml.TrimEnd();
+        TrimTrailingWhitespace(div);
         if (element.HasAttributes())
         {
             return false;
@@ -37,14 +47,71 @@ public static class HtmlPrettyPrint
         if (!element.HasChildNodes)
         {
             element.RemoveFromParent();
-        }
-        else if (element.Children.Length == 1)
-        {
-            var child = element.FirstChild;
-            element.Parent!.AppendChild(child);
+            return true;
         }
 
-        return true;
+        if (element.Parent is { } parent &&
+            TryGetOnlyElement(element, out var child))
+        {
+            parent.InsertBefore(child, element);
+            element.RemoveFromParent();
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Equivalent to trimming the end of InnerHtml, but without serializing and re-parsing
+    /// the subtree. The round trip replaced every descendant node, which both invalidated
+    /// nodes already collected for scrubbing and cost a full parse per div.
+    /// </summary>
+    static void TrimTrailingWhitespace(IElement element)
+    {
+        while (element.LastChild is IText text)
+        {
+            var trimmed = text.Data.TrimEnd();
+            if (trimmed.Length != 0)
+            {
+                text.Data = trimmed;
+                return;
+            }
+
+            element.RemoveChild(text);
+        }
+    }
+
+    /// <summary>
+    /// Gets the single child element of <paramref name="element" />, but only when every
+    /// other child node is whitespace. Returns false when there is no element, more than
+    /// one element, or any text that unwrapping would discard.
+    /// </summary>
+    static bool TryGetOnlyElement(IElement element, [NotNullWhen(true)] out IElement? child)
+    {
+        child = null;
+        foreach (var node in element.ChildNodes)
+        {
+            if (node is IElement candidate)
+            {
+                if (child != null)
+                {
+                    child = null;
+                    return false;
+                }
+
+                child = candidate;
+                continue;
+            }
+
+            if (node is not IText text ||
+                !string.IsNullOrWhiteSpace(text.Data))
+            {
+                child = null;
+                return false;
+            }
+        }
+
+        return child != null;
     }
 
     public static void ScrubAttributes(this INodeList nodes, string name) =>
@@ -66,7 +133,8 @@ public static class HtmlPrettyPrint
             foreach (var attribute in element.Attributes)
             {
                 var value = tryGetValue(attribute);
-                if (value != null)
+                if (value != null &&
+                    !string.Equals(value, attribute.Value, StringComparison.Ordinal))
                 {
                     attribute.Value = value;
                 }
@@ -125,15 +193,21 @@ public static class HtmlPrettyPrint
     public static void ScrubAspCacheBusterTagHelper(this IEnumerable<IElement> elements) =>
         elements.ScrubAttributes(static attr =>
         {
-            if (attr.Name.Equals("href", comparer) || attr.Name.Equals("src", comparer))
+            if (!attr.Name.Equals("href", comparer) &&
+                !attr.Name.Equals("src", comparer))
             {
-                const string pattern = @"([^""?]+[?&]v=)[\w\-]+";
-                const string replacement = "$1{TAG_HELPER_VERSION}";
-
-                return Regex.Replace(attr.Value, pattern, replacement);
+                return null;
             }
 
-            return attr.Value;
+            var value = attr.Value;
+
+            // the pattern cannot match without a literal v=
+            if (value.IndexOf("v=", StringComparison.Ordinal) == -1)
+            {
+                return null;
+            }
+
+            return cacheBusterPattern.Replace(value, cacheBusterReplacement);
         });
 
     /// <summary>
@@ -213,19 +287,53 @@ public static class HtmlPrettyPrint
         };
         using var writer = new StringWriter(builder);
         document.ToHtml(writer, formatter);
-        writer.Flush();
     }
 
     static INodeList Parse(string source)
     {
         var parser = new HtmlParser();
-        if (source.StartsWith("<!DOCTYPE html>", StringComparison.InvariantCultureIgnoreCase) ||
-            source.StartsWith("<html>", StringComparison.InvariantCultureIgnoreCase))
+        if (IsDocument(source))
         {
             return parser.ParseDocument(source).ChildNodes;
         }
 
-        var dom = parser.ParseDocument("<html><body></body></html>");
+        // an empty document still yields html, head, and body, so it serves as a
+        // fragment context for less work than parsing the markup for them
+        var dom = parser.ParseDocument(string.Empty);
         return parser.ParseFragment(source, dom.Body!);
+    }
+
+    /// <summary>
+    /// Detects a full document so it is parsed as one. Parsing a document as a body
+    /// fragment silently discards the html, head, and body elements.
+    /// </summary>
+    static bool IsDocument(string source)
+    {
+        var index = 0;
+        while (index < source.Length &&
+               char.IsWhiteSpace(source[index]))
+        {
+            index++;
+        }
+
+        if (Matches("<!doctype"))
+        {
+            return true;
+        }
+
+        if (!Matches("<html"))
+        {
+            return false;
+        }
+
+        // guard against matching elements like <htmlfoo>
+        var next = index + "<html".Length;
+        return next >= source.Length ||
+               source[next] is '>' or '/' ||
+               char.IsWhiteSpace(source[next]);
+
+        bool Matches(string tag) =>
+            index + tag.Length <= source.Length &&
+            string.Compare(source, index, tag, 0, tag.Length, comparer) == 0;
     }
 }
