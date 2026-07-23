@@ -6,7 +6,7 @@
   <ItemGroup>
     <PackageVersion Include="AngleSharp" Version="1.5.2" />
     <PackageVersion Include="BenchmarkDotNet" Version="0.15.8" />
-    <PackageVersion Include="AngleSharp.Css" Version="1.0.0-beta.224" />
+    <PackageVersion Include="AngleSharp.Css" Version="1.0.0-beta.228" />
     <PackageVersion Include="AngleSharp.Diffing" Version="1.1.1" />
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.4.1" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
