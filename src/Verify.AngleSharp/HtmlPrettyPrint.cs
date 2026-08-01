@@ -404,32 +404,36 @@ public static class HtmlPrettyPrint
     }
 
     /// <summary>
-    /// The name of the first element the source opens, lowercased, or null when it opens with none.
+    /// The name of the first element the source opens, lowercased, or null when it opens none.
+    /// Anything that is not an element start is passed over: a comment, a doctype, or a stray angle
+    /// bracket in text. A fragment captured from a rendered page routinely leads with a comment — a
+    /// framework's component marker, say — and the tag after it is still the one that decides how the
+    /// fragment has to be parsed.
     /// </summary>
     static string? FirstTag(string source)
     {
-        var start = source.IndexOf('<');
-        if (start == -1)
+        for (var start = source.IndexOf('<'); start != -1; start = source.IndexOf('<', start + 1))
         {
-            return null;
+            var index = start + 1;
+            if (index == source.Length ||
+                !char.IsLetter(source[index]))
+            {
+                continue;
+            }
+
+            var end = index;
+            while (end < source.Length &&
+                   char.IsLetterOrDigit(source[end]))
+            {
+                end++;
+            }
+
+            return source
+                .Substring(index, end - index)
+                .ToLowerInvariant();
         }
 
-        var index = start + 1;
-        var end = index;
-        while (end < source.Length &&
-               char.IsLetterOrDigit(source[end]))
-        {
-            end++;
-        }
-
-        if (end == index)
-        {
-            return null;
-        }
-
-        return source
-            .Substring(index, end - index)
-            .ToLowerInvariant();
+        return null;
     }
 
     /// <summary>
