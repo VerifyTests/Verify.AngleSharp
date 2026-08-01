@@ -109,6 +109,16 @@ public class PrettyPrintHtmlTests
             .PrettyPrintHtml();
     }
 
+    // A fragment captured from a rendered page routinely leads with a comment — Blazor marks every
+    // component boundary with one — and the tag after it still decides how the fragment parses.
+    [Test]
+    public Task TableFragmentBehindAComment()
+    {
+        var html = "<!--marker--><thead><tr><th>Name</th></tr></thead>";
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
+
     // The leading tag decides the parse context, so one that needs no special context still parses
     // against body — including a fragment that opens with text rather than a tag.
     [Test]
