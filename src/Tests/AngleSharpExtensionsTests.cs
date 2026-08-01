@@ -15,7 +15,7 @@ public class AngleSharpExtensionsTests
 
         var result = nodes.DescendantsAndSelf().ToList();
 
-        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(new[] { "A", "B" }));
+        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(["A", "B"]));
     }
 
     [Test]
@@ -36,7 +36,7 @@ public class AngleSharpExtensionsTests
 
         var result = nodes.Descendants().ToList();
 
-        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(new[] { "B" }));
+        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(["B"]));
     }
 
     [Test]

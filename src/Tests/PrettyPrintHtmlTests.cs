@@ -49,9 +49,7 @@ public class PrettyPrintHtmlTests
     [Test]
     public Task FragmentIsNotWrappedInDocument()
     {
-        var html = """
-                   <p>My first paragraph.</p>
-                   """;
+        var html = "<p>My first paragraph.</p>";
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
@@ -90,9 +88,7 @@ public class PrettyPrintHtmlTests
     [Test]
     public Task TableSectionFragment()
     {
-        var html = """
-                   <thead><tr><th>Name</th></tr></thead><tbody><tr><td>Aaron</td></tr></tbody>
-                   """;
+        var html = "<thead><tr><th>Name</th></tr></thead><tbody><tr><td>Aaron</td></tr></tbody>";
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
@@ -100,9 +96,7 @@ public class PrettyPrintHtmlTests
     [Test]
     public Task TableRowFragment()
     {
-        var html = """
-                   <tr><td>Aaron</td><td>FullTime</td></tr>
-                   """;
+        var html = "<tr><td>Aaron</td><td>FullTime</td></tr>";
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
@@ -110,9 +104,7 @@ public class PrettyPrintHtmlTests
     [Test]
     public Task TableCellFragment()
     {
-        var html = """
-                   <td>Aaron</td><td>FullTime</td>
-                   """;
+        var html = "<td>Aaron</td><td>FullTime</td>";
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
@@ -122,9 +114,7 @@ public class PrettyPrintHtmlTests
     [Test]
     public Task FragmentOpeningWithText()
     {
-        var html = """
-                   Some text <b>then an element</b>
-                   """;
+        var html = "Some text <b>then an element</b>";
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
