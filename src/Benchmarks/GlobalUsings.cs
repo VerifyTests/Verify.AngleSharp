@@ -5,4 +5,5 @@ global using AngleSharp.Dom;
 global using AngleSharp.Html.Dom;
 global using AngleSharp.Html.Parser;
 global using BenchmarkDotNet.Attributes;
+global using BenchmarkDotNet.Running;
 global using VerifyTests.AngleSharp;
