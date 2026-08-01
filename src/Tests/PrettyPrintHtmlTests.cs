@@ -55,4 +55,77 @@ public class PrettyPrintHtmlTests
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
+
+    // Indenting the content of a pre rewrites what it says. The formatter is told to leave the
+    // elements whose whitespace is significant alone, so the text survives the round trip.
+    [Test]
+    public Task PreservesPreformattedText()
+    {
+        var html = """
+                   <div><pre>SELECT [e].[Name]
+                   FROM [Employees] AS [e]
+                   WHERE [e].[Active] = 1</pre></div>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
+
+    [Test]
+    public Task PreservesTextareaAndScript()
+    {
+        var html = """
+                   <div><textarea>line one
+                   line two</textarea><script>
+                   if (x) {
+                     go();
+                   }
+                   </script></div>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
+
+    // A table fragment is what an innerHTML capture of a table yields. Parsed against body — where a
+    // table tag is not recognised — the tags would be dropped and only the cell text would survive.
+    [Test]
+    public Task TableSectionFragment()
+    {
+        var html = """
+                   <thead><tr><th>Name</th></tr></thead><tbody><tr><td>Aaron</td></tr></tbody>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
+
+    [Test]
+    public Task TableRowFragment()
+    {
+        var html = """
+                   <tr><td>Aaron</td><td>FullTime</td></tr>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
+
+    [Test]
+    public Task TableCellFragment()
+    {
+        var html = """
+                   <td>Aaron</td><td>FullTime</td>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
+
+    // The leading tag decides the parse context, so one that needs no special context still parses
+    // against body — including a fragment that opens with text rather than a tag.
+    [Test]
+    public Task FragmentOpeningWithText()
+    {
+        var html = """
+                   Some text <b>then an element</b>
+                   """;
+        return Verify(html, "html")
+            .PrettyPrintHtml();
+    }
 }

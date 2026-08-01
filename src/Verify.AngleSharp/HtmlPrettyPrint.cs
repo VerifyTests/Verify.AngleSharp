@@ -1,4 +1,4 @@
-﻿namespace VerifyTests.AngleSharp;
+namespace VerifyTests.AngleSharp;
 
 public static class HtmlPrettyPrint
 {
@@ -7,6 +7,25 @@ public static class HtmlPrettyPrint
     const string cacheBusterReplacement = "$1{TAG_HELPER_VERSION}";
 
     static readonly Regex cacheBusterPattern = new(@"([^""?]+[?&]v=)[\w\-]+");
+
+    /// <summary>
+    /// Elements rendered as white-space:pre, where the text is content rather than layout: indenting
+    /// inside one rewrites what the document says rather than how it reads. Script and style are not
+    /// here — the formatter already emits their raw-text bodies as they stand.
+    /// </summary>
+    static readonly string[] preformatted =
+    [
+        "pre",
+        "textarea",
+        "listing",
+        "plaintext"
+    ];
+
+    /// <summary>
+    /// Stands in for a preformatted element while the document is formatted around it. Letters and
+    /// digits only, so it passes through text escaping as written.
+    /// </summary>
+    const string preformattedPlaceholder = "VerifyAngleSharpPreformatted";
 
     public static void All(Action<INodeList>? action = null)
     {
@@ -279,14 +298,69 @@ public static class HtmlPrettyPrint
         var document = Parse(source);
         action?.Invoke(document);
 
+        // Lifted out before formatting and put back after: the formatter indents the content of
+        // every element it walks, which for these rewrites the content rather than the layout.
+        var preserved = Detach(document);
+
         builder.Clear();
         var formatter = new PrettyMarkupFormatter
         {
             Indentation = "  ",
             NewLine = "\n"
         };
-        using var writer = new StringWriter(builder);
-        document.ToHtml(writer, formatter);
+        using (var writer = new StringWriter(builder))
+        {
+            document.ToHtml(writer, formatter);
+        }
+
+        for (var index = 0; index < preserved.Count; index++)
+        {
+            builder.Replace(Placeholder(index), preserved[index]);
+        }
+    }
+
+    /// <summary>
+    /// Swaps the content of each preformatted element for a placeholder, returning the markup each
+    /// stood for. The element keeps its place, so the document is laid out exactly as it would have
+    /// been; only what is inside is held back, to go in again untouched.
+    /// </summary>
+    static List<string> Detach(INodeList nodes)
+    {
+        var preserved = new List<string>();
+        foreach (var element in nodes.DescendantsAndSelf<IElement>())
+        {
+            // The outermost of a nest is enough: its content is taken whole, inner ones included.
+            if (!IsPreformatted(element) ||
+                InsidePreformatted(element) ||
+                !element.HasChildNodes)
+            {
+                continue;
+            }
+
+            preserved.Add(element.InnerHtml);
+            element.TextContent = Placeholder(preserved.Count - 1);
+        }
+
+        return preserved;
+    }
+
+    static string Placeholder(int index) =>
+        $"{preformattedPlaceholder}{index}";
+
+    static bool IsPreformatted(IElement element) =>
+        preformatted.Contains(element.LocalName, StringComparer.OrdinalIgnoreCase);
+
+    static bool InsidePreformatted(IElement element)
+    {
+        for (var parent = element.ParentElement; parent is not null; parent = parent.ParentElement)
+        {
+            if (IsPreformatted(parent))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     static INodeList Parse(string source)
@@ -300,7 +374,62 @@ public static class HtmlPrettyPrint
         // an empty document still yields html, head, and body, so it serves as a
         // fragment context for less work than parsing the markup for them
         var dom = parser.ParseDocument(string.Empty);
-        return parser.ParseFragment(source, dom.Body!);
+        return parser.ParseFragment(source, FragmentContext(dom, source));
+    }
+
+    /// <summary>
+    /// The element a fragment is parsed against. Body suits almost everything, but the table tags are
+    /// only recognised inside a table: against body the tree construction rules discard them and keep
+    /// their text, so a fragment of table rows would come back with every tag gone.
+    /// </summary>
+    static IElement FragmentContext(IHtmlDocument dom, string source)
+    {
+        var context = FirstTag(source) switch
+        {
+            "caption" or "colgroup" or "tbody" or "tfoot" or "thead" => "table",
+            // A row against a table would gain the tbody the parser implies around it, so the section
+            // is the context rather than the table itself.
+            "tr" => "tbody",
+            "td" or "th" => "tr",
+            "col" => "colgroup",
+            _ => null
+        };
+
+        if (context is null)
+        {
+            return dom.Body!;
+        }
+
+        return dom.CreateElement(context);
+    }
+
+    /// <summary>
+    /// The name of the first element the source opens, lowercased, or null when it opens with none.
+    /// </summary>
+    static string? FirstTag(string source)
+    {
+        var start = source.IndexOf('<');
+        if (start == -1)
+        {
+            return null;
+        }
+
+        var index = start + 1;
+        var end = index;
+        while (end < source.Length &&
+               char.IsLetterOrDigit(source[end]))
+        {
+            end++;
+        }
+
+        if (end == index)
+        {
+            return null;
+        }
+
+        return source
+            .Substring(index, end - index)
+            .ToLowerInvariant();
     }
 
     /// <summary>
