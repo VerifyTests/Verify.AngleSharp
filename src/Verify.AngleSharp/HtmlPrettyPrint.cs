@@ -41,7 +41,7 @@ public static class HtmlPrettyPrint
         // materialized since scrubbing removes nodes from the tree being walked
         foreach (var element in elements.DescendantsAndSelf<IElement>().ToList())
         {
-            TryScrubDiv(element);
+            element.TryScrubDiv();
         }
     }
 
