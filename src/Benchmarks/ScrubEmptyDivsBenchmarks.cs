@@ -11,19 +11,29 @@ public class ScrubEmptyDivsBenchmarks
 
     static string Build()
     {
-        var builder = new StringBuilder("<!DOCTYPE html><html><body>");
+        var builder = new StringBuilder(
+            """
+            <!DOCTYPE html>
+            <html>
+            <body>
+            """);
         for (var i = 0; i < 100; i++)
         {
-            builder.Append("<div class=\"row\"><p>paragraph ")
-                .Append(i)
-                .Append("</p><p>a second paragraph carrying some text</p>\n  </div>")
-                .Append("<div><p>only child ")
-                .Append(i)
-                .Append("</p></div>")
-                .Append("<div>   </div>");
+            builder.Append(
+                $"""
+                 <div class="row"><p>paragraph {i}</p><p>a second paragraph carrying some text</p>
+                   </div>
+                 <div><p>only child {i}</p></div>
+                 <div>   </div>
+
+                 """);
         }
 
-        builder.Append("</body></html>");
+        builder.Append(
+            """
+            </body>
+            </html>
+            """);
         return builder.ToString();
     }
 

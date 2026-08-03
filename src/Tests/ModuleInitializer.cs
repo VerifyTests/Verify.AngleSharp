@@ -13,6 +13,7 @@
     {
         VerifyDiffPlex.Initialize(OutputType.Compact);
         VerifierSettings.InitializePlugins();
-        VerifierSettings.IgnoreMembers("Length", "Index");
+        // Language resolves to the ambient UI culture, so it varies by machine
+        VerifierSettings.IgnoreMembers("Length", "Index", "Language");
     }
 }

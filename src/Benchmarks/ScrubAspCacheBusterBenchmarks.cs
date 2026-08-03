@@ -11,27 +11,33 @@ public class ScrubAspCacheBusterBenchmarks
 
     static string Build()
     {
-        var builder = new StringBuilder("<!DOCTYPE html><html><head>");
-        builder.Append("""<link href="/css/site.css?v=r2K1aJs2_7mdAedOAb0OQXXTwOVHY3K46ElgPZWqeuI" rel="stylesheet">""");
-        builder.Append("""<script src="/js/site.js?v=4q1jwHbih5xTTZoI1K3CyVNBn6G5cyGXls93d_7XUPA"></script>""");
-        builder.Append("</head><body>");
+        var builder = new StringBuilder(
+            """
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <link href="/css/site.css?v=r2K1aJs2_7mdAedOAb0OQXXTwOVHY3K46ElgPZWqeuI" rel="stylesheet">
+            <script src="/js/site.js?v=4q1jwHbih5xTTZoI1K3CyVNBn6G5cyGXls93d_7XUPA"></script>
+            </head>
+            <body>
+            """);
         for (var i = 0; i < 100; i++)
         {
-            builder.Append("<div class=\"card shadow\" id=\"card-")
-                .Append(i)
-                .Append("\" data-index=\"")
-                .Append(i)
-                .Append("\" role=\"listitem\">")
-                .Append("<a href=\"/products/")
-                .Append(i)
-                .Append("\" title=\"Product\">Product</a>")
-                .Append("<img src=\"/images/product-")
-                .Append(i)
-                .Append(".png\" alt=\"Product image\" loading=\"lazy\">")
-                .Append("</div>");
+            builder.Append(
+                $"""
+                  <div class="card shadow" id="card-{i}" data-index="{i}" role="listitem">
+                    <a href="/products/{i}" title="Product">Product</a>
+                    <img src="/images/product-{i}.png" alt="Product image" loading="lazy">
+                  </div>
+
+                  """);
         }
 
-        builder.Append("</body></html>");
+        builder.Append(
+            """
+            </body>
+            </html>
+            """);
         return builder.ToString();
     }
 
