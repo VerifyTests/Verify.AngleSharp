@@ -128,4 +128,34 @@ public class PrettyPrintHtmlTests
         return Verify(html, "html")
             .PrettyPrintHtml();
     }
+
+    // A fragment is parsed against a context element that is never written, and the formatter breaks
+    // the line before every node inside an element. So the first node took a break with nothing in
+    // front of it and the markup opened on the second line.
+    //
+    // Compared as text rather than by the registered html comparer: that one diffs the two DOMs, where
+    // a blank line before the first node is whitespace between nodes and no difference at all. Every
+    // other test here is blind to the thing this one is for.
+    [Test]
+    public Task FragmentDoesNotOpenWithABlankLine()
+    {
+        var html = "<p>My first paragraph.</p>";
+        return Verify(html, "html")
+            .PrettyPrintHtml()
+            .UseStringComparer(CompareText);
+    }
+
+    static Task<VerifyTests.CompareResult> CompareText(
+        string received,
+        string verified,
+        IReadOnlyDictionary<string, object> context)
+    {
+        if (string.Equals(received, verified, StringComparison.Ordinal))
+        {
+            return Task.FromResult(VerifyTests.CompareResult.Equal);
+        }
+
+        return Task.FromResult(
+            VerifyTests.CompareResult.NotEqual($"Received:{Environment.NewLine}{received}"));
+    }
 }

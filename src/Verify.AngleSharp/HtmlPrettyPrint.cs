@@ -313,9 +313,27 @@ public static class HtmlPrettyPrint
             document.ToHtml(writer, formatter);
         }
 
+        TrimLeadingNewLine(builder);
+
         for (var index = 0; index < preserved.Count; index++)
         {
             builder.Replace(Placeholder(index), preserved[index]);
+        }
+    }
+
+    /// <summary>
+    /// The formatter breaks the line before every node that sits inside an element, to part it from
+    /// whatever came before. A fragment is parsed against a context element that is never itself
+    /// written, so its first node takes that break with nothing in front of it and the markup opens on
+    /// the second line. A document has no such context, and a fragment opening with text is not broken
+    /// before either, so in those cases there is nothing here to remove.
+    /// </summary>
+    static void TrimLeadingNewLine(StringBuilder builder)
+    {
+        if (builder.Length > 0 &&
+            builder[0] == '\n')
+        {
+            builder.Remove(0, 1);
         }
     }
 
