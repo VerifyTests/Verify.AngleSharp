@@ -1,4 +1,3 @@
-[TestFixture]
 public class ScrubEmptyDivsTests
 {
     static string Scrub(string html)
@@ -11,67 +10,67 @@ public class ScrubEmptyDivsTests
     }
 
     [Test]
-    public void UnwrapsSingleElementChildInPlace()
+    public async Task UnwrapsSingleElementChildInPlace()
     {
         var result = Scrub("<div><p>content</p></div><footer>foot</footer>");
 
-        Assert.That(result, Is.EqualTo("<p>content</p><footer>foot</footer>"));
+        await Assert.That(result).IsEqualTo("<p>content</p><footer>foot</footer>");
     }
 
     [Test]
-    public void UnwrapsElementSurroundedByWhitespace()
+    public async Task UnwrapsElementSurroundedByWhitespace()
     {
         var result = Scrub("<div>\n  <p>content</p>\n</div><footer>foot</footer>");
 
-        Assert.That(result, Is.EqualTo("<p>content</p><footer>foot</footer>"));
+        await Assert.That(result).IsEqualTo("<p>content</p><footer>foot</footer>");
     }
 
     [Test]
-    public void UnwrapsNestedDivs()
+    public async Task UnwrapsNestedDivs()
     {
         var result = Scrub("<div><div><p>deep</p></div></div><footer>foot</footer>");
 
-        Assert.That(result, Is.EqualTo("<p>deep</p><footer>foot</footer>"));
+        await Assert.That(result).IsEqualTo("<p>deep</p><footer>foot</footer>");
     }
 
     [Test]
-    public void DoesNotUnwrapWhenTextWouldBeLost()
+    public async Task DoesNotUnwrapWhenTextWouldBeLost()
     {
         var result = Scrub("<div>hello <span>world</span></div>");
 
-        Assert.That(result, Is.EqualTo("<div>hello <span>world</span></div>"));
+        await Assert.That(result).IsEqualTo("<div>hello <span>world</span></div>");
     }
 
     [Test]
-    public void DoesNotUnwrapMultipleElementChildren()
+    public async Task DoesNotUnwrapMultipleElementChildren()
     {
         var result = Scrub("<div><p>a</p><p>b</p></div>");
 
-        Assert.That(result, Is.EqualTo("<div><p>a</p><p>b</p></div>"));
+        await Assert.That(result).IsEqualTo("<div><p>a</p><p>b</p></div>");
     }
 
     [Test]
-    public void RemovesEmptyDiv()
+    public async Task RemovesEmptyDiv()
     {
         var result = Scrub("<div></div><footer>foot</footer>");
 
-        Assert.That(result, Is.EqualTo("<footer>foot</footer>"));
+        await Assert.That(result).IsEqualTo("<footer>foot</footer>");
     }
 
     [Test]
-    public void RemovesWhitespaceOnlyDiv()
+    public async Task RemovesWhitespaceOnlyDiv()
     {
         var result = Scrub("<div>\n   </div><footer>foot</footer>");
 
-        Assert.That(result, Is.EqualTo("<footer>foot</footer>"));
+        await Assert.That(result).IsEqualTo("<footer>foot</footer>");
     }
 
     [Test]
-    public void KeepsTextOnlyDiv()
+    public async Task KeepsTextOnlyDiv()
     {
         var result = Scrub("<div>My First Heading</div>");
 
-        Assert.That(result, Is.EqualTo("<div>My First Heading</div>"));
+        await Assert.That(result).IsEqualTo("<div>My First Heading</div>");
     }
 
     static IElement FirstElement(string html)
@@ -82,41 +81,41 @@ public class ScrubEmptyDivsTests
     }
 
     [Test]
-    public void ReturnsTrueWhenDivRemoved() =>
-        Assert.That(FirstElement("<div></div>").TryScrubDiv(), Is.True);
+    public async Task ReturnsTrueWhenDivRemoved() =>
+        await Assert.That(FirstElement("<div></div>").TryScrubDiv()).IsTrue();
 
     [Test]
-    public void ReturnsTrueWhenDivUnwrapped() =>
-        Assert.That(FirstElement("<div><p>x</p></div>").TryScrubDiv(), Is.True);
+    public async Task ReturnsTrueWhenDivUnwrapped() =>
+        await Assert.That(FirstElement("<div><p>x</p></div>").TryScrubDiv()).IsTrue();
 
     [Test]
-    public void ReturnsFalseForNonDiv() =>
-        Assert.That(FirstElement("<p>x</p>").TryScrubDiv(), Is.False);
+    public async Task ReturnsFalseForNonDiv() =>
+        await Assert.That(FirstElement("<p>x</p>").TryScrubDiv()).IsFalse();
 
     [Test]
-    public void ReturnsFalseWhenDivHasAttributes() =>
-        Assert.That(FirstElement("<div id='a'><p>x</p></div>").TryScrubDiv(), Is.False);
+    public async Task ReturnsFalseWhenDivHasAttributes() =>
+        await Assert.That(FirstElement("<div id='a'><p>x</p></div>").TryScrubDiv()).IsFalse();
 
     [Test]
-    public void ReturnsFalseWhenNothingToScrub() =>
-        Assert.That(FirstElement("<div><p>a</p><p>b</p></div>").TryScrubDiv(), Is.False);
+    public async Task ReturnsFalseWhenNothingToScrub() =>
+        await Assert.That(FirstElement("<div><p>a</p><p>b</p></div>").TryScrubDiv()).IsFalse();
 
     [Test]
-    public void DoesNotThrowForDivWithoutParent()
+    public async Task DoesNotThrowForDivWithoutParent()
     {
         var parser = new HtmlParser();
         var document = parser.ParseDocument("<html><body><div><p>content</p></div></body></html>");
         var div = document.QuerySelector("div")!;
         div.Remove();
 
-        Assert.DoesNotThrow(() => div.TryScrubDiv());
+        await Assert.That(() => div.TryScrubDiv()).ThrowsNothing();
     }
 
     [Test]
-    public void KeepsDivWithAttributes()
+    public async Task KeepsDivWithAttributes()
     {
         var result = Scrub("<div id='keep'><p>content</p></div>");
 
-        Assert.That(result, Is.EqualTo("""<div id="keep"><p>content</p></div>"""));
+        await Assert.That(result).IsEqualTo("""<div id="keep"><p>content</p></div>""");
     }
 }

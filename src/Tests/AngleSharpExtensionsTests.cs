@@ -1,4 +1,3 @@
-[TestFixture]
 public class AngleSharpExtensionsTests
 {
     static INodeList Parse(string html)
@@ -9,43 +8,43 @@ public class AngleSharpExtensionsTests
     }
 
     [Test]
-    public void DescendantsAndSelfDoesNotDuplicateTopLevelNodes()
+    public async Task DescendantsAndSelfDoesNotDuplicateTopLevelNodes()
     {
         var nodes = Parse("<a><b></b></a>");
 
         var result = nodes.DescendantsAndSelf().ToList();
 
-        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(["A", "B"]));
+        await Assert.That(result.Select(_ => _.NodeName)).IsEquivalentTo(["A", "B"], CollectionOrdering.Matching);
     }
 
     [Test]
-    public void DescendantsAndSelfDoesNotDuplicateSiblings()
+    public async Task DescendantsAndSelfDoesNotDuplicateSiblings()
     {
         var nodes = Parse("<p>one</p><p>two</p>");
 
         var result = nodes.DescendantsAndSelf<IElement>().ToList();
 
-        Assert.That(result, Has.Count.EqualTo(2));
-        Assert.That(result.Distinct().Count(), Is.EqualTo(2));
+        await Assert.That(result).Count().IsEqualTo(2);
+        await Assert.That(result.Distinct().Count()).IsEqualTo(2);
     }
 
     [Test]
-    public void DescendantsExcludesTopLevelNodes()
+    public async Task DescendantsExcludesTopLevelNodes()
     {
         var nodes = Parse("<a><b></b></a>");
 
         var result = nodes.Descendants().ToList();
 
-        Assert.That(result.Select(_ => _.NodeName), Is.EqualTo(["B"]));
+        await Assert.That(result.Select(_ => _.NodeName)).IsEquivalentTo(["B"], CollectionOrdering.Matching);
     }
 
     [Test]
-    public void DescendantsOfTypeExcludesTopLevelNodes()
+    public async Task DescendantsOfTypeExcludesTopLevelNodes()
     {
         var nodes = Parse("<p>one</p><p>two</p>");
 
         var result = nodes.Descendants<IElement>().ToList();
 
-        Assert.That(result, Is.Empty);
+        await Assert.That(result).IsEmpty();
     }
 }
